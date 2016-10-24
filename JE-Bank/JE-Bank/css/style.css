@@ -1,0 +1,145 @@
+﻿div.container {
+    width: 1100px;
+    background-color: white;
+    margin: 0 auto;
+    align-content: center;
+    padding: 25px;
+    
+}
+h1{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: Courier New, Courier, monospace;
+}
+div.header {
+    background-color: rebeccapurple;
+    color: white;
+    padding: 10px 25px;
+}
+div.nav1{
+    background-color: gold;
+}
+div.nav1.ul{
+margin: 1px;
+padding: 0px 5px;
+}
+
+div.nav1 ul li{
+    margin: 0px;
+    padding: 8px 5px;
+    list-style: none;
+    display: inline-block;
+}
+div.nav1 ul li a {
+    color: black;
+    padding: 10px 5px; 
+    text-decoration: none;
+    
+}
+div.nav1 ul li a:link,:visited{
+    color: black;
+    
+}
+div.nav1 ul li a:hover
+{
+background-color: silver;
+
+}
+div.front{
+    padding: 10px 25px;    
+}
+
+
+.active {
+    background-color: goldenrod;
+}
+.footer {
+    background-color: rebeccapurple;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+.box{
+width: 49%;
+height: auto;
+padding: 0px 0px 5px 0px;
+display: inline-block;
+
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    margin-left: -60px;
+
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.clearfix:before, .clearfix:after {content: "";display: table;}.clearfix:after{clear: both}.clearfix {*zoom: 1;}
+@media all  and (max-width: 1099px){
+div.plata{
+    width: auto;
+    padding: 0px 10px  0px 10px;
+}
+h1 {
+    font-size: 150%; 
+    }
+
+}
+
+
+
+@media all and (max-width: 601px) {
+h1 {
+    font-size: 110%; 
+    }
+div.mobil{
+    width: 0 auto;
+    padding: 1px 1px;
+    
+}
+div.nav2 {
+    margin: 0px 0px;
+    padding: 0 25px 0 0;
+  
+}
+div.nav1 ul li{
+    display: block;
+    width: auto;
+    text-align: center;
+}
+div.nav1 ul li a {
+
+    padding: 8px 5px;   
+}
+.box{
+width: 100%;
+height: auto;
+padding: 0px 0px 5px 0px;
+display: block;
+}
+
