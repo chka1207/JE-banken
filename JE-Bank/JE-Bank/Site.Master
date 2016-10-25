@@ -4,17 +4,41 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>JE-Bank Utvecklingsportal </title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/style.css" rel="stylesheet"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+     <div class="container mobil plata">
+            <div class="header ">
+                <h1>JE Bank</h1>
+            </div>
+            <div class="nav1 nav2">
+                <ul>
+                    <li><a href="Index.aspx" class="active">Hem</a></li>
+                    <li><a href="info.html">Info</a></li>
+                    <li><a href="prov.html">Prov</a></li>
+                    <li><a href="utbildning.html">Utbildning</a></li>
+                    <li><a href="mina.html">Mina Resultat</a></li>
+                </ul>
+            </div>
+             <div class="front">
+               <form id="form1" runat="server">
+                    <div>
+                      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
-        </asp:ContentPlaceHolder>
-    </div>
-    </form>
+                       </asp:ContentPlaceHolder>
+                    </div>
+              </form>
+            </div>
+            <div class="footer">
+                <p> JE Bank AB</p>
+                <p> Valvgränden 24  12345 Ankeborg </p>
+            </div>
+        </div>
+    
 </body>
 </html>
