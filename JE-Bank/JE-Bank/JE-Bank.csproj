@@ -68,7 +68,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="prov.aspx" />
-    <Content Include="rasultat.aspx" />
+    <Content Include="resultat.aspx" />
     <Content Include="script\script.js" />
     <Content Include="Site.Master" />
     <Content Include="xml\prov.xml" />
@@ -100,12 +100,12 @@
     <Compile Include="prov.aspx.designer.cs">
       <DependentUpon>prov.aspx</DependentUpon>
     </Compile>
-    <Compile Include="rasultat.aspx.cs">
-      <DependentUpon>rasultat.aspx</DependentUpon>
+    <Compile Include="resultat.aspx.cs">
+      <DependentUpon>resultat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="rasultat.aspx.designer.cs">
-      <DependentUpon>rasultat.aspx</DependentUpon>
+    <Compile Include="resultat.aspx.designer.cs">
+      <DependentUpon>resultat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
