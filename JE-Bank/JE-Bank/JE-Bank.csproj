@@ -71,7 +71,8 @@
     <Content Include="resultat.aspx" />
     <Content Include="script\script.js" />
     <Content Include="Site.Master" />
-    <Content Include="xml\prov.xml" />
+    <Content Include="xml\kunskap.xml" />
+    <Content Include="xml\licens.xml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
