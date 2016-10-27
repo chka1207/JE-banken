@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Npgsql;
 using System.Configuration;
 using System.Data;
+using System.Linq;
+using System.Web;
+
 
 namespace JE_Bank
 {
@@ -18,8 +19,7 @@ namespace JE_Bank
         public static List<NpgsqlParameter> lista { get; set; }
         public postgres()
         {
-            // db=vår databas
-            // Inlogg ändras i appconfig
+             // Inlogg ändras i webconfig
             _conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["db"].ConnectionString);
             try
             {
