@@ -48,9 +48,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Npgsql">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Npgsql.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -71,14 +68,11 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="prov.aspx" />
-    <Content Include="resultat.aspx">
-      <BrowseToURL>~/resultat.aspx</BrowseToURL>
-    </Content>
+    <Content Include="resultat.aspx" />
     <Content Include="script\script.js" />
     <Content Include="Site.Master" />
-    <Content Include="xml\prov.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="xml\kunskap.xml" />
+    <Content Include="xml\licens.xml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -99,7 +93,6 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="postgres.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="prov.aspx.cs">
       <DependentUpon>prov.aspx</DependentUpon>
