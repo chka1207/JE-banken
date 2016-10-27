@@ -18,10 +18,8 @@
             </div>
             <div class="nav1 nav2">
                 <ul>
-                    <li><a href="Index.aspx" class="active">Hem</a></li>
-                    <li><a href="#">Info</a></li>
-                    <li><a href="prov.aspx">Prov</a></li>
-                    <li><a href="#">Utbildning</a></li>
+                    <li><a href="Index.aspx" class="active">Hem</a></li>        
+                    <li><a href="prov.aspx">Prov</a></li>        
                     <li><a href="resultat.aspx">Mina Resultat</a></li>
                 </ul>
             </div>

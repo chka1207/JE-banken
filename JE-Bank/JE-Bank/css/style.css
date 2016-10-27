@@ -114,32 +114,35 @@ h1 {
 
 
 @media all and (max-width: 601px) {
-h1 {
-    font-size: 110%; 
+    h1 {
+        font-size: 110%;
     }
-div.mobil{
-    width: 0 auto;
-    padding: 1px 1px;
-    
-}
-div.nav2 {
-    margin: 0px 0px;
-    padding: 0 25px 0 0;
-  
-}
-div.nav1 ul li{
-    display: block;
-    width: auto;
-    text-align: center;
-}
-div.nav1 ul li a {
 
-    padding: 8px 5px;   
-}
-.box{
-width: 100%;
-height: auto;
-padding: 0px 0px 5px 0px;
-display: block;
+    div.mobil {
+        width: 0 auto;
+        padding: 1px 1px;
+    }
+
+    div.nav2 {
+        margin: 0px 0px;
+        padding: 0 25px 0 0;
+    }
+
+    div.nav1 ul li {
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+
+        div.nav1 ul li a {
+            padding: 8px 5px;
+        }
+
+    .box {
+        width: 100%;
+        height: auto;
+        padding: 0px 0px 5px 0px;
+        display: block;
+    }
 }
 
