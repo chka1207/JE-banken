@@ -8,6 +8,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="css/style.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="script/script.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -16,11 +18,11 @@
             <div class="header ">
                 <h1>JE Bank</h1>
             </div>
-            <div class="nav1 nav2">
-                <ul>
-                    <li><a href="Index.aspx" class="active">Hem</a></li>        
-                    <li><a href="prov.aspx">Prov</a></li>        
-                    <li><a href="resultat.aspx">Mina Resultat</a></li>
+            <div id="nav" class="nav1 nav2" >
+                <ul >
+                    <li><a runat="server" id="hem"  href="Index.aspx">Hem</a></li>        
+                    <li><a runat="server" id="Lprov"  href="prov.aspx">Prov</a></li>        
+                    <li><a runat="server" id="Lresultat" href="resultat.aspx">Mina Resultat</a></li>
                 </ul>
             </div>
              <div class="front">
