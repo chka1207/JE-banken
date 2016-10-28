@@ -50,7 +50,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Npgsql, Version=2.2.4.3, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\Npgsql.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\tillfällig\Downloads\npgsql\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -75,8 +75,12 @@
     <Content Include="resultat.aspx" />
     <Content Include="script\script.js" />
     <Content Include="Site.Master" />
-    <Content Include="xml\kunskap.xml" />
-    <Content Include="xml\licens.xml" />
+    <Content Include="xml\kunskap.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xml\licens.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -90,6 +94,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fråga.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
