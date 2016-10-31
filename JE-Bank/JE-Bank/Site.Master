@@ -39,6 +39,8 @@
                 <p> Valvgränden 24  12345 Ankeborg </p>
             </div>
         </div>
+
+    <div id ="frågor" runat="server"></div>
     
 </body>
 </html>

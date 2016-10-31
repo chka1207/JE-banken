@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<licensprov>
-  <provdel ID ="produkter">
+<kunskapsprov>
+  <provdel ID ="1">
     <namn>Produkter och hantering av kundens affärer</namn>
     <fråga>
       <text>Vad är inflation?</text>
@@ -50,7 +50,7 @@
     </fråga>
   </provdel>
 
-  <provdel ID ="ekonomi">
+  <provdel ID ="2">
     <namn>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</namn>
     <fråga>
       <text>Vad är inflation?</text>
@@ -100,7 +100,7 @@
     </fråga>
   </provdel>
 
-  <provdel ID ="etik">
+  <provdel ID ="3">
     <namn>Etik och regelverk</namn>
     <fråga>
       <text>Vad är inflation?</text>
@@ -149,7 +149,7 @@
       </svarsalternativ>
     </fråga>
   </provdel>
-</licensprov>
+</kunskapsprov>
 
 
 

@@ -70,6 +70,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="kunskap.aspx" />
     <Content Include="packages.config" />
     <Content Include="prov.aspx" />
     <Content Include="resultat.aspx" />
@@ -101,6 +102,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kunskap.aspx.cs">
+      <DependentUpon>kunskap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kunskap.aspx.designer.cs">
+      <DependentUpon>kunskap.aspx</DependentUpon>
     </Compile>
     <Compile Include="postgres.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
