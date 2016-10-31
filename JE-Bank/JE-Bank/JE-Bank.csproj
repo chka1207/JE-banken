@@ -70,6 +70,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="frågor.aspx" />
     <Content Include="packages.config" />
     <Content Include="prov.aspx" />
     <Content Include="resultat.aspx" />
@@ -95,6 +96,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fråga.cs" />
+    <Compile Include="frågor.aspx.cs">
+      <DependentUpon>frågor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frågor.aspx.designer.cs">
+      <DependentUpon>frågor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
