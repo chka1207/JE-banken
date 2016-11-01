@@ -25,6 +25,9 @@ div.nav1.ul{
 margin: 1px;
 padding: 0px 5px;
 }
+div.change a{
+    float:right
+}
 
 div.nav1 ul li{
     margin: 0px;
@@ -44,7 +47,8 @@ div.nav1 ul li a:link,:visited{
 }
 div.nav1 ul li a:hover
 {
-background-color: silver;
+    border-radius: 5px;
+    background-color: silver;
 
 }
 div.front{
@@ -53,6 +57,7 @@ div.front{
 
 
 .active {
+    border-radius: 5px;
     background-color: goldenrod;
 }
 .footer {
@@ -74,6 +79,7 @@ img {
     height: auto;
     display: block;
     margin: auto;
+    border-radius: 5px;
   
 }
 .tooltip {

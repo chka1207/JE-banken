@@ -11,12 +11,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="script/script.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+   </asp:ContentPlaceHolder>
 </head>
 <body>
      <div class="container mobil plata">
-            <div class="header ">
+            <div class="header">
                 <h1>JE Bank</h1>
+                <div class="change"> 
+                    <a runat="server" id="A1"  href="Index.aspx">Hem</a>
+                </div>
             </div>
             <div id="nav" class="nav1 nav2" >
                 <ul >
@@ -44,3 +47,4 @@
     
 </body>
 </html>
+

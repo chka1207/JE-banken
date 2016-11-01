@@ -13,6 +13,7 @@ namespace JE_Bank
         protected void Page_Load(object sender, EventArgs e)
         {
            
+            // Switchcase som styr active i menyn
             string thisURL = this.Page.GetType().Name.ToString();
             switch (thisURL)
             {
@@ -26,6 +27,11 @@ namespace JE_Bank
                     Lresultat.Attributes.Add("class", "active");
                     break;
             }
+        }
+
+        protected void change_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
