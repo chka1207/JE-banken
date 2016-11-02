@@ -69,11 +69,11 @@ namespace JE_Bank
                 if (f.bild != "")
                 {
                     
-                    div.InnerHtml = f.provdel + " " + f.fråga + " " + f.bild;
+                    div.InnerHtml = "<br>" + f.provdel + " " + f.fråga + " " + f.bild + "<br>" + f.svar1 + "<br>" + f.svar2 + "<br>" + f.svar3 + "<br>" + f.svar4;
                 }
                 else
                 {
-                    div.InnerHtml = f.provdel + " " + f.fråga;
+                    div.InnerHtml = "<br>" + f.provdel + " " + f.fråga + "<br>" + f.svar1 + "<br>" + f.svar2 + "<br>" + f.svar3 + "<br>" + f.svar4;
                 }
                 
                 test.Controls.Add(div);
@@ -98,9 +98,11 @@ namespace JE_Bank
                 f.fråga = node["text"].InnerText;
                 f.provdel = node.ParentNode["namn"].InnerText;
                 f.bild = node["text"].Attributes["bild"].InnerText;
-                                
-
-
+                f.svar1 = node.ChildNodes[1].ChildNodes[0].InnerText;
+                f.svar2 = node.ChildNodes[1].ChildNodes[1].InnerText;
+                f.svar3 = node.ChildNodes[1].ChildNodes[2].InnerText;
+                f.svar4 = node.ChildNodes[1].ChildNodes[3].InnerText;
+                
                 x.Add(f);
             }
 
