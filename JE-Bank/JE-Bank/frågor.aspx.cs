@@ -12,10 +12,23 @@ namespace JE_Bank
     public partial class frågor : System.Web.UI.Page
     {
         List<Fråga> lista = new List<Fråga>();
+        private Dictionary<string, Control> fDynamicControls = new Dictionary<string, Control>();
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            if (IsPostBack)
+            {
+                laddaFragor();
+          
+                lista = XmlToList();
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-           // test1();
-            laddaFragor();
+           if(!IsPostBack)
+            {
+                laddaFragor();
+            }
+            
         }
 
         public void laddaFragor()
@@ -37,16 +50,15 @@ namespace JE_Bank
                 HtmlGenericControl rd33 = new HtmlGenericControl("span");
                 HtmlInputRadioButton rd4 = new HtmlInputRadioButton();
                 HtmlGenericControl rd44 = new HtmlGenericControl("span");
-                div.Attributes.Add("id", lista[i].fråga  );
-                rd1.Attributes.Add("id", "rd" + lista[i].svar1 + "");
-                rd1.Attributes.Add("value", lista[i].svar1);
-                rd2.Attributes.Add("id", "rd'" + lista[i].svar2 + "'");
-                rd3.Attributes.Add("id", "rd'" + lista[i].svar3 + "'");
-                rd4.Attributes.Add("id", "rd'" + lista[i].svar4 + "'");
-                rd1.Attributes.Add("name", lista[i].fråga);
-                rd2.Attributes.Add("name", lista[i].fråga);
-                rd3.Attributes.Add("name", lista[i].fråga);
-                rd4.Attributes.Add("name", lista[i].fråga);
+                div.Attributes.Add("Id","gurka");
+                rd1.Attributes.Add("Id","fel");
+                rd2.Attributes.Add("Id",lista[i].svar2);
+                rd3.Attributes.Add("Id", lista[i].svar3  );
+                rd4.Attributes.Add("Id", lista[i].svar4  );
+                rd1.Attributes.Add("name", lista[i].fråga+i);
+                rd2.Attributes.Add("name", lista[i].fråga+i);
+                rd3.Attributes.Add("name", lista[i].fråga+i);
+                rd4.Attributes.Add("name", lista[i].fråga+i);
                 fråga = "<br />"+lista[i].provdel + "<br />" + lista[i].fråga + "<br />";
                 //  "<input type='radio' id='" + lista[i].svar2 + "'name='radiobutton' value='" + lista[i].svar2 +"'>" + lista[i].svar2 + "<br />" + 
                 //  "<input type='radio' id='" + lista[i].svar3 + "'name='radiobutton' value='" + lista[i].svar3 +"'>" + lista[i].svar3 + "<br />" + 
@@ -71,11 +83,7 @@ namespace JE_Bank
                 
             }
         }
-        public void check()
-        {
-          
-            
-        }
+
     public void test1()
         {
             Fråga f = new Fråga();
@@ -125,17 +133,59 @@ namespace JE_Bank
                 f.svar3 = node.ChildNodes[1].ChildNodes[2].InnerText;
                 f.svar4 = node.ChildNodes[1].ChildNodes[3].InnerText;
 
+
+                if (node.ChildNodes[1].ChildNodes[0].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[0].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[1].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[1].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[2].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[2].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[3].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[3].InnerText;
+                }
+
                 x.Add(f);
             }
 
-            //List<Fråga> testlista = (from e in doc.Load(@"xml\kunskap.xml").Root.Elements("kunskapsprov")
-            //                         select new Fråga
-            //                         {
-            //                             provdel = (string).e.Element("namn"),
-            //                             fråga = (string).e.Element("text")
-            //                         }).ToList(); 
 
             return x;
         }
+
+        protected void Ratta_Click(object sender, EventArgs e)
+        {
+            Control ctrl = this.FindControlRecursive("fel");
+            
+            int r =0;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                
+
+                //Control c = fDynamicControls["fel"];
+             //  Control ctrl = (ContentPlaceHolder)Page.FindControl("fel");
+                
+                RadioButton rd1 = (RadioButton)Page.FindControl("fel");
+              //  RadioButton rd2 = this.Master.FindControl("MainContent").FindControl(lista[i].svar2) as RadioButton;
+                RadioButton rd3 = Page.FindControl(lista[i].svar3) as RadioButton;
+                RadioButton rd4 = Page.FindControl(lista[i].svar4) as RadioButton;
+
+
+                //if (rd1.Checked)
+                //{
+                //    r++;
+                //}
+            }
+            
+                
+        }
+       
+
+
     }
 }
