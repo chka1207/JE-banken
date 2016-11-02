@@ -66,7 +66,16 @@ namespace JE_Bank
             foreach (Fråga f in frågelista)
             {
                 HtmlGenericControl div = new HtmlGenericControl("div");
-                div.InnerHtml = f.provdel +" " + f.fråga;
+                if (f.bild != "")
+                {
+                    
+                    div.InnerHtml = "<br>" + f.provdel + " " + f.fråga + " " + f.bild + "<br>" + f.svar1 + "<br>" + f.svar2 + "<br>" + f.svar3 + "<br>" + f.svar4;
+                }
+                else
+                {
+                    div.InnerHtml = "<br>" + f.provdel + " " + f.fråga + "<br>" + f.svar1 + "<br>" + f.svar2 + "<br>" + f.svar3 + "<br>" + f.svar4;
+                }
+                
                 test.Controls.Add(div);
             }
         }
@@ -79,20 +88,21 @@ namespace JE_Bank
             string path = Server.MapPath(@"xml\kunskap.xml");
             XmlDocument doc = new XmlDocument();
             doc.Load(path);
-
-            XmlNodeList provdel = doc.SelectNodes("/kunskapsprov/provdel");
-            XmlNodeList frågan = doc.SelectNodes("/kunskapsprov/provdel/fråga");
+            XmlNodeList provdel = doc.SelectNodes("/kunskapsprov/provdel/fråga");
+            
 
             foreach (XmlNode node in provdel)
             {
                 Fråga f = new Fråga();
-                f.provdel = node["namn"].InnerText;
-                foreach (XmlNode node2 in frågan)
-                {
-                    
-                    f.fråga = node2["text"].InnerText;
-                }
 
+                f.fråga = node["text"].InnerText;
+                f.provdel = node.ParentNode["namn"].InnerText;
+                f.bild = node["text"].Attributes["bild"].InnerText;
+                f.svar1 = node.ChildNodes[1].ChildNodes[0].InnerText;
+                f.svar2 = node.ChildNodes[1].ChildNodes[1].InnerText;
+                f.svar3 = node.ChildNodes[1].ChildNodes[2].InnerText;
+                f.svar4 = node.ChildNodes[1].ChildNodes[3].InnerText;
+                
                 x.Add(f);
             }
 
