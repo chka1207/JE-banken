@@ -65,17 +65,18 @@ namespace JE_Bank
         {
             foreach (Fråga f in frågelista)
             {
+                                               
                 HtmlGenericControl div = new HtmlGenericControl("div");
                 if (f.bild != "")
                 {
-                    
+
                     div.InnerHtml = "<br>" + f.provdel + " " + f.fråga + " " + f.bild + "<br>" + f.svar1 + "<br>" + f.svar2 + "<br>" + f.svar3 + "<br>" + f.svar4;
                 }
                 else
                 {
                     div.InnerHtml = "<br>" + f.provdel + " " + f.fråga + "<br>" + f.svar1 + "<br>" + f.svar2 + "<br>" + f.svar3 + "<br>" + f.svar4;
                 }
-                
+
                 test.Controls.Add(div);
             }
         }
@@ -103,6 +104,24 @@ namespace JE_Bank
                 f.svar3 = node.ChildNodes[1].ChildNodes[2].InnerText;
                 f.svar4 = node.ChildNodes[1].ChildNodes[3].InnerText;
                 
+                
+                if (node.ChildNodes[1].ChildNodes[0].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[0].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[1].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[1].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[2].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[2].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[3].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[3].InnerText;
+                }
+
                 x.Add(f);
             }
 

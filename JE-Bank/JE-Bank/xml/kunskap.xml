@@ -5,7 +5,7 @@
     <fråga>
       <text id ="1" bild ="">Vad är inflation?</text>
       <svarsalternativ>
-        <svar id="1">Försämrat penningvärde</svar>
+        <svar id="rätt">Försämrat penningvärde</svar>
         <svar id="2">En maträtt</svar>
         <svar id="3">Förbättrat penningvärde</svar>
         <svar id="4">En fastighets belåningsgrad</svar>
@@ -15,25 +15,25 @@
       <text id ="2" bild ="">Vad är LAS?</text>
       <svarsalternativ>
         <svar id="1">En person vid namn Lars-Anders Svensson</svar>
-        <svar id="2">Lagen om anställningsskydd</svar>
+        <svar id="rätt">Lagen om anställningsskydd</svar>
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
     </fråga>
     <fråga>
-      <text id ="3" bild ="">Vilka två djur är däggdjur?</text>
+      <text id ="3" bild ="">Vilket djur är ett däggdjur?</text>
       <svarsalternativ>
         <svar id="1">Gädda</svar>
         <svar id="2">Kalkon</svar>
-        <svar id="3">Människa</svar>
-        <svar id="4">Hund</svar>
+        <svar id="rätt">Människa</svar>
+        <svar id="4">Räka</svar>
       </svarsalternativ>
     </fråga>
     <fråga>
       <text id ="4" bild ="http://studenter.miun.se/~chka1207/IK073GU04/djur.jpg">Vad föreställer bilden?</text>
       <svarsalternativ>
         <svar id="1">En björn</svar>
-        <svar id="2">En hund</svar>
+        <svar id="rätt">En hund</svar>
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
@@ -44,7 +44,7 @@
         <svar id="1">Vad är ett betalkort?</svar>
         <svar id="2">Nej</svar>
         <svar id="3">Vet ej</svar>
-        <svar id="4">Ja, självklart</svar>
+        <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
     </fråga>
   </provdel>
@@ -54,7 +54,7 @@
     <fråga>
       <text id ="6" bild ="">Vad är inflation?</text>
       <svarsalternativ>
-        <svar id="1">Försämrat penningvärde</svar>
+        <svar id="rätt">Försämrat penningvärde</svar>
         <svar id="2">En maträtt</svar>
         <svar id="3">Förbättrat penningvärde</svar>
         <svar id="4">En fastighets belåningsgrad</svar>
@@ -64,25 +64,25 @@
       <text id ="7" bild ="">Vad är LAS?</text>
       <svarsalternativ>
         <svar id="1">En person vid namn Lars-Anders Svensson</svar>
-        <svar id="2">Lagen om anställningsskydd</svar>
+        <svar id="rätt">Lagen om anställningsskydd</svar>
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
     </fråga>
     <fråga>
-      <text id ="8" bild ="">Vilka två djur är däggdjur?</text>
+      <text id ="8" bild ="">Vilket djur är ett däggdjur?</text>
       <svarsalternativ>
         <svar id="1">Gädda</svar>
         <svar id="2">Kalkon</svar>
-        <svar id="3">Människa</svar>
-        <svar id="4">Hund</svar>
+        <svar id="rätt">Människa</svar>
+        <svar id="4">Räka</svar>
       </svarsalternativ>
     </fråga>
     <fråga>
       <text id ="9" bild ="http://studenter.miun.se/~chka1207/IK073GU04/djur.jpg">Vad föreställer bilden?</text>
       <svarsalternativ>
         <svar id="1">En björn</svar>
-        <svar id="2">En hund</svar>
+        <svar id="rätt">En hund</svar>
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
@@ -93,7 +93,7 @@
         <svar id="1">Vad är ett betalkort?</svar>
         <svar id="2">Nej</svar>
         <svar id="3">Vet ej</svar>
-        <svar id="4">Ja, självklart</svar>
+        <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
     </fråga>
   </provdel>
@@ -103,7 +103,7 @@
     <fråga>
       <text id ="11" bild ="">Vad är inflation?</text>
       <svarsalternativ>
-        <svar id="1">Försämrat penningvärde</svar>
+        <svar id="rätt">Försämrat penningvärde</svar>
         <svar id="2">En maträtt</svar>
         <svar id="3">Förbättrat penningvärde</svar>
         <svar id="4">En fastighets belåningsgrad</svar>
@@ -113,25 +113,25 @@
       <text id ="12" bild ="">Vad är LAS?</text>
       <svarsalternativ>
         <svar id="1">En person vid namn Lars-Anders Svensson</svar>
-        <svar id="2">Lagen om anställningsskydd</svar>
+        <svar id="rätt">Lagen om anställningsskydd</svar>
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
     </fråga>
     <fråga>
-      <text id ="13" bild ="">Vilka två djur är däggdjur?</text>
+      <text id ="13" bild ="">Vilket djur är ett däggdjur?</text>
       <svarsalternativ>
         <svar id="1">Gädda</svar>
         <svar id="2">Kalkon</svar>
-        <svar id="3">Människa</svar>
-        <svar id="4">Hund</svar>
+        <svar id="rätt">Människa</svar>
+        <svar id="4">Räka</svar>
       </svarsalternativ>
     </fråga>
     <fråga>
       <text id ="14" bild ="http://studenter.miun.se/~chka1207/IK073GU04/djur.jpg">Vad föreställer bilden?</text>
       <svarsalternativ>
         <svar id="1">En björn</svar>
-        <svar id="2">En hund</svar>
+        <svar id="rätt">En hund</svar>
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
@@ -142,7 +142,7 @@
         <svar id="1">Vad är ett betalkort?</svar>
         <svar id="2">Nej</svar>
         <svar id="3">Vet ej</svar>
-        <svar id="4">Ja, självklart</svar>
+        <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
     </fråga>
   </provdel>

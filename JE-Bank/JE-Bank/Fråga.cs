@@ -14,5 +14,6 @@ namespace JE_Bank
         public string svar3 { get; set; }
         public string svar4 { get; set; }
         public string bild { get; set; }
+        public string rättSvar { get; set; }
     }
 }
