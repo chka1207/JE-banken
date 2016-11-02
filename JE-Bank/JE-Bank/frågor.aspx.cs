@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
+using System.Xml;
 
 namespace JE_Bank
 {
@@ -13,12 +14,14 @@ namespace JE_Bank
         List<Fråga> lista = new List<Fråga>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            test1();
+           // test1();
             laddaFragor();
         }
 
         public void laddaFragor()
         {
+            lista = XmlToList();
+            
             string fråga;
             HtmlGenericControl div2 = new HtmlGenericControl("div");
             div2.Attributes.Add("id", "div2");
@@ -44,7 +47,7 @@ namespace JE_Bank
                 rd2.Attributes.Add("name", lista[i].fråga);
                 rd3.Attributes.Add("name", lista[i].fråga);
                 rd4.Attributes.Add("name", lista[i].fråga);
-                fråga = lista[i].provdel + "<br />" + lista[i].fråga + "<br />";
+                fråga = "<br />"+lista[i].provdel + "<br />" + lista[i].fråga + "<br />";
                 //  "<input type='radio' id='" + lista[i].svar2 + "'name='radiobutton' value='" + lista[i].svar2 +"'>" + lista[i].svar2 + "<br />" + 
                 //  "<input type='radio' id='" + lista[i].svar3 + "'name='radiobutton' value='" + lista[i].svar3 +"'>" + lista[i].svar3 + "<br />" + 
                 //  "<input type='radio' id='" + lista[i].svar4 + "'name='radiobutton' value='" + lista[i].svar4 +"'>" + lista[i].svar4 + "<br />" + 
@@ -65,6 +68,7 @@ namespace JE_Bank
                 div.Controls.Add(rd4);
                 div.Controls.Add(rd44);
                 test.Controls.Add(div);
+                
             }
         }
         public void check()
@@ -98,6 +102,40 @@ namespace JE_Bank
             f2.svar3 = "hajk2";
             f2.svar4 = "baloba2";
             lista.Add(f2);
+        }
+        public List<Fråga> XmlToList()
+        {
+            List<Fråga> x = new List<Fråga>();
+
+            string path = Server.MapPath(@"xml\kunskap.xml");
+            XmlDocument doc = new XmlDocument();
+            doc.Load(path);
+            XmlNodeList provdel = doc.SelectNodes("/kunskapsprov/provdel/fråga");
+
+
+            foreach (XmlNode node in provdel)
+            {
+                Fråga f = new Fråga();
+
+                f.fråga = node["text"].InnerText;
+                f.provdel = node.ParentNode["namn"].InnerText;
+                f.bild = node["text"].Attributes["bild"].InnerText;
+                f.svar1 = node.ChildNodes[1].ChildNodes[0].InnerText;
+                f.svar2 = node.ChildNodes[1].ChildNodes[1].InnerText;
+                f.svar3 = node.ChildNodes[1].ChildNodes[2].InnerText;
+                f.svar4 = node.ChildNodes[1].ChildNodes[3].InnerText;
+
+                x.Add(f);
+            }
+
+            //List<Fråga> testlista = (from e in doc.Load(@"xml\kunskap.xml").Root.Elements("kunskapsprov")
+            //                         select new Fråga
+            //                         {
+            //                             provdel = (string).e.Element("namn"),
+            //                             fråga = (string).e.Element("text")
+            //                         }).ToList(); 
+
+            return x;
         }
     }
 }
