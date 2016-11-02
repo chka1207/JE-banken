@@ -77,6 +77,7 @@
     <Content Include="resultat.aspx" />
     <Content Include="script\script.js" />
     <Content Include="Site.Master" />
+    <Content Include="test.aspx" />
     <Content Include="xml\kunskap.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -141,6 +142,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

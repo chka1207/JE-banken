@@ -13,22 +13,14 @@ namespace JE_Bank
     {
         List<Fråga> lista = new List<Fråga>();
         private Dictionary<string, Control> fDynamicControls = new Dictionary<string, Control>();
-        protected void Page_Init(object sender, EventArgs e)
-        {
-            if (IsPostBack)
-            {
-                laddaFragor();
-
-                lista = XmlToList();
-            }
-        }
+       
         protected void Page_Load(object sender, EventArgs e)
         {
-           if(!IsPostBack)
+            if (!IsPostBack)
             {
                 laddaFragor();
             }
-            
+            lista = XmlToList();
         }
 
         public void laddaFragor()
@@ -36,8 +28,8 @@ namespace JE_Bank
             lista = XmlToList();
             
             string fråga;
-            HtmlGenericControl div2 = new HtmlGenericControl("div");
-            div2.Attributes.Add("id", "div2");
+            //HtmlGenericControl div2 = new HtmlGenericControl("div");
+            //div2.Attributes.Add("id", "div2");
 
             for (int i = 0; i < lista.Count; i++)
             {
@@ -170,6 +162,8 @@ namespace JE_Bank
 
         protected void Ratta_Click(object sender, EventArgs e)
         {
+            
+
             Control ctrl = this.FindControlRecursive("fel");
             
             int r =0;
@@ -177,11 +171,11 @@ namespace JE_Bank
             {
                 
 
-                //Control c = fDynamicControls["fel"];
+             //  Control c = fDynamicControls["fel"];
              //  Control ctrl = (ContentPlaceHolder)Page.FindControl("fel");
                 
                 RadioButton rd1 = (RadioButton)Page.FindControl("fel");
-              //  RadioButton rd2 = this.Master.FindControl("MainContent").FindControl(lista[i].svar2) as RadioButton;
+                RadioButton rd2 = this.FindControl("ContentPlaceholder1_test").FindControl(lista[i].svar2) as RadioButton;
                 RadioButton rd3 = Page.FindControl(lista[i].svar3) as RadioButton;
                 RadioButton rd4 = Page.FindControl(lista[i].svar4) as RadioButton;
 
