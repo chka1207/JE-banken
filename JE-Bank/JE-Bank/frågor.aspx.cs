@@ -18,7 +18,7 @@ namespace JE_Bank
             if (IsPostBack)
             {
                 laddaFragor();
-          
+
                 lista = XmlToList();
             }
         }
@@ -59,7 +59,15 @@ namespace JE_Bank
                 rd2.Attributes.Add("name", lista[i].fråga+i);
                 rd3.Attributes.Add("name", lista[i].fråga+i);
                 rd4.Attributes.Add("name", lista[i].fråga+i);
-                fråga = "<br />"+lista[i].provdel + "<br />" + lista[i].fråga + "<br />";
+                if (lista[i].bild != "")
+                {
+                    string bild = "<img src='" + lista[i].bild + "'>";
+                    fråga = "<br />" + lista[i].provdel + "<br />" + bild + "<br/>" + lista[i].fråga + "<br />";
+                }
+                else
+                {
+                    fråga = "<br />" + lista[i].provdel + "<br />" + lista[i].fråga + "<br />";
+                }
                 //  "<input type='radio' id='" + lista[i].svar2 + "'name='radiobutton' value='" + lista[i].svar2 +"'>" + lista[i].svar2 + "<br />" + 
                 //  "<input type='radio' id='" + lista[i].svar3 + "'name='radiobutton' value='" + lista[i].svar3 +"'>" + lista[i].svar3 + "<br />" + 
                 //  "<input type='radio' id='" + lista[i].svar4 + "'name='radiobutton' value='" + lista[i].svar4 +"'>" + lista[i].svar4 + "<br />" + 
@@ -80,6 +88,8 @@ namespace JE_Bank
                 div.Controls.Add(rd4);
                 div.Controls.Add(rd44);
                 test.Controls.Add(div);
+
+                
                 
             }
         }
