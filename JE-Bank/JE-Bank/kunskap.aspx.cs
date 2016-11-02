@@ -69,8 +69,9 @@ namespace JE_Bank
                 HtmlGenericControl div = new HtmlGenericControl("div");
                 if (f.bild != "")
                 {
+                    string bild = "<img src='" + f.bild + "'>";
 
-                    div.InnerHtml = "<br>" + f.provdel + " " + f.fråga + " " + f.bild + "<br>" + f.svar1 + "<br>" + f.svar2 + "<br>" + f.svar3 + "<br>" + f.svar4;
+                    div.InnerHtml = "<br>" + f.provdel + " " + f.fråga + " " + bild + "<br>" + f.svar1 + "<br>" + f.svar2 + "<br>" + f.svar3 + "<br>" + f.svar4;
                 }
                 else
                 {

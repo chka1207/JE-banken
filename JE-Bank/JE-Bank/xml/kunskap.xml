@@ -30,7 +30,7 @@
       </svarsalternativ>
     </fråga>
     <fråga>
-      <text id ="4" bild ="http://studenter.miun.se/~chka1207/IK073GU04/djur.jpg">Vad föreställer bilden?</text>
+      <text id ="4" bild ="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
       <svarsalternativ>
         <svar id="1">En björn</svar>
         <svar id="rätt">En hund</svar>
@@ -79,7 +79,7 @@
       </svarsalternativ>
     </fråga>
     <fråga>
-      <text id ="9" bild ="http://studenter.miun.se/~chka1207/IK073GU04/djur.jpg">Vad föreställer bilden?</text>
+      <text id ="9" bild ="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
       <svarsalternativ>
         <svar id="1">En björn</svar>
         <svar id="rätt">En hund</svar>
@@ -128,7 +128,7 @@
       </svarsalternativ>
     </fråga>
     <fråga>
-      <text id ="14" bild ="http://studenter.miun.se/~chka1207/IK073GU04/djur.jpg">Vad föreställer bilden?</text>
+      <text id ="14" bild ="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
       <svarsalternativ>
         <svar id="1">En björn</svar>
         <svar id="rätt">En hund</svar>
