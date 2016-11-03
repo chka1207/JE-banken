@@ -204,35 +204,24 @@ namespace JE_Bank
 
         protected void Ratta_Click(object sender, EventArgs e)
         {
+            int resultat = 0;
             ContentPlaceHolder MainC = (ContentPlaceHolder)Page.Master.FindControl("ContentPlaceHolder1");
 
-            var rd1 = (RadioButton)MainC.FindControl("test").FindControl("rd00");
-            //Blir null
-            //       Control ctrl = this.FindControlRecursive("fel");
-
-
-            //int r =0;
-            //for (int i = 0; i < lista.Count; i++)
-            //{
-
-
-
-            //           //  Control c = fDynamicControls["fel"];
-            //           //  Control ctrl = (ContentPlaceHolder)Page.FindControl("fel");
-
-
-            //    // fungerar ej
-            // //   RadioButton rd2 = this.FindControl("ContentPlaceholder1_test").FindControl(lista[i].svar2) as RadioButton;
-            //    RadioButton rd3 = Page.FindControl(lista[i].svar3) as RadioButton;
-            //    RadioButton rd4 = Page.FindControl(lista[i].svar4) as RadioButton;
-
-
-            //    //if (rd1.Checked)
-            //    //{
-            //    //    r++;
-            //    //}
-            //}
-
+            for (int i = 0; i < lista.Count; i++)
+            {
+                for (int r = 0; r < 4; r++)
+                {
+                    var rd1 = (RadioButton)MainC.FindControl("test").FindControl("rd"+i.ToString()+r.ToString());
+                    if(rd1.Checked)
+                    {
+                        if(rd1.Text== lista[i].rättSvar)
+                        {
+                            resultat++;
+                        }
+                    }
+                }
+            }
+            
 
         }
        
