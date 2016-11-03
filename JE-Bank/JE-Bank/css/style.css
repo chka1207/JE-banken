@@ -12,6 +12,8 @@ h1{
 }
 p{
     font-family: Courier New, Courier, monospace;
+    margin: 5px 2px;
+    padding: 0px 0px;
 }
 div.header {
     background-color: rebeccapurple;
@@ -67,11 +69,19 @@ div.front{
     font-size: 12px;
     padding: 15px;
 }
-.box{
-width: 49%;
-height: auto;
-padding: 0px 0px 5px 0px;
-display: inline-block;
+.box {
+    width: 49%;
+    height: auto;
+    padding: 0px 0px 5px 0px;
+    display: inline-block;
+}
+.result{ 
+      width:auto;
+      padding: 0px 8px 0px 0px;
+      height:auto;   
+      display:inline-block;
+
+       }
 
 }
 img {
@@ -105,6 +115,9 @@ img {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+h5{
+    margin: 4px 0px;
+}
 .clearfix:before, .clearfix:after {content: "";display: table;}.clearfix:after{clear: both}.clearfix {*zoom: 1;}
 @media all  and (max-width: 1099px){
 div.plata{
@@ -116,6 +129,7 @@ h1 {
     }
 
 }
+
 
 
 

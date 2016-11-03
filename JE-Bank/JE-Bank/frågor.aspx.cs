@@ -211,7 +211,7 @@ namespace JE_Bank
                 }
             }
             resultat = del1 + del2 + del3;
-            Session["Resul"] = resultat;
+            Session["Resul"] = lista.Count;
             Session["del1"] = del1;
             Session["del2"] = del2;
             Session["del3"] = del3;
