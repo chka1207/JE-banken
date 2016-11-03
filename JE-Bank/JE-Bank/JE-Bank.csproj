@@ -129,6 +129,7 @@
     <Compile Include="prov.aspx.designer.cs">
       <DependentUpon>prov.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Provklass.cs" />
     <Compile Include="resultat.aspx.cs">
       <DependentUpon>resultat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
