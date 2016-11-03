@@ -13,22 +13,49 @@ namespace JE_Bank {
     public partial class rasultat {
         
         /// <summary>
-        /// resultat control.
+        /// lbresultat1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl resultat;
+        protected global::System.Web.UI.WebControls.Label lbresultat1;
         
         /// <summary>
-        /// lbprov control.
+        /// lbresultat2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbprov;
+        protected global::System.Web.UI.WebControls.Label lbresultat2;
+        
+        /// <summary>
+        /// lbresultat3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbresultat3;
+        
+        /// <summary>
+        /// lbresultat4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbresultat4;
+        
+        /// <summary>
+        /// lbresultat5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbresultat5;
         
         /// <summary>
         /// lbtypav1 control.

@@ -5,9 +5,11 @@
     <div>
         <div> <h4>Resultat</h4></div>
         <div class="box"> 
-            <h5> Här kan du se ditt senaste resultat</h5>
-            <div id="resultat" runat="server"> </div>
-            <asp:Label ID="lbprov" runat="server" Text="hejåhåå" Visible="false"></asp:Label>
+            <asp:Label ID="lbresultat1" runat="server" Text="Ditt RESULTAT" Visible="false"></asp:Label>
+            <div><asp:Label ID="lbresultat2" runat="server" Text="hejåhåå" Visible="false"></asp:Label></div>
+            <div><asp:Label ID="lbresultat3" runat="server" Text="hejåhåå" Visible="false"></asp:Label></div>
+            <div><asp:Label ID="lbresultat4" runat="server" Text="hejåhåå" Visible="false"></asp:Label></div>
+            <div><asp:Label ID="lbresultat5" runat="server" Text="hejåhåå" Visible="false"></asp:Label></div>
             <div>
             <h5> Dina resultat</h5>
                 <div class ="result">
