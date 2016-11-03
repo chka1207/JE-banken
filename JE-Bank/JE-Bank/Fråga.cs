@@ -8,6 +8,7 @@ namespace JE_Bank
     public class Fråga
     {
         public string fråga { get; set; }
+        public int frågaID { get; set; }
         public string provdel { get; set; }
         public int provdelID { get; set; }
         public string svar1 { get; set; }

@@ -40,6 +40,7 @@ namespace JE_Bank
             //GetXml();
 
             AppendFrågor(XmlToList());
+            
         }
         public void GetXml()
         {
@@ -80,6 +81,8 @@ namespace JE_Bank
 
                 test.Controls.Add(div);
             }
+
+           
         }
 
 
@@ -135,6 +138,31 @@ namespace JE_Bank
 
             return x;
         }
+
+        //public void skrivTillXml()
+        //{
+        //    Provklass p = new Provklass();
+        //    p.userID = 1; // ska komma från click_event
+        //    string path = Server.MapPath(@"xml\kunskap.xml");
+        //    XmlDocument doc = new XmlDocument();
+        //    doc.Load(path);
+        //    XmlNode root = doc.DocumentElement;
+
+        //    XmlElement user_svar = doc.CreateElement("user_svar");
+        //    XmlNodeList node = doc.SelectNodes("/kunskapsprov/provdel/fråga/svarsalternativ");
+        //    user_svar.InnerText = ""
+
+        //    nytt.InnerText = "Test"; //den data som ska lagras i elementet
+        //    barn.InnerText = "barntest";
+        //    nytt.AppendChild(barn);
+
+        //    root.AppendChild(nytt);
+        //    string nyttxml = Server.MapPath(@"xml\" + p.userID + ".xml");
+
+        //    doc.Save(nyttxml);
+        //    p.xmldatabas = doc.ToString();
+            
+        //}
     }
 }
 
