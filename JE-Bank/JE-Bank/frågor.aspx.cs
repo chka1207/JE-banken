@@ -78,52 +78,10 @@ namespace JE_Bank
                     div.Controls.Add(radio);
                 }
                 test.Controls.Add(div);
-
-
-
-
-                //HtmlInputRadioButton rd1 = new HtmlInputRadioButton();
-                //HtmlGenericControl rd11 = new HtmlGenericControl("span");
-                //HtmlInputRadioButton rd2 = new HtmlInputRadioButton();
-                //HtmlGenericControl rd22 = new HtmlGenericControl("span");
-                //HtmlInputRadioButton rd3 = new HtmlInputRadioButton();
-                //HtmlGenericControl rd33 = new HtmlGenericControl("span");
-                //HtmlInputRadioButton rd4 = new HtmlInputRadioButton();
-                //HtmlGenericControl rd44 = new HtmlGenericControl("span");
-
-
-                //div.Attributes.Add("Id","gurka");
-                //rd1.ID = "rd1"+i.ToString();
-                //rd2.Attributes.Add("Id",lista[i].svar2);
-                //rd3.Attributes.Add("Id", lista[i].svar3  );
-                //rd4.Attributes.Add("Id", lista[i].svar4  );
-                //rd1.Attributes.Add("name", lista[i].fråga+i);
-                //rd2.Attributes.Add("name", lista[i].fråga+i);
-                //rd3.Attributes.Add("name", lista[i].fråga+i);
-                //rd4.Attributes.Add("name", lista[i].fråga+i);
-                
-                ////  "<input type='radio' id='" + lista[i].svar2 + "'name='radiobutton' value='" + lista[i].svar2 +"'>" + lista[i].svar2 + "<br />" + 
-                ////  "<input type='radio' id='" + lista[i].svar3 + "'name='radiobutton' value='" + lista[i].svar3 +"'>" + lista[i].svar3 + "<br />" + 
-                ////  "<input type='radio' id='" + lista[i].svar4 + "'name='radiobutton' value='" + lista[i].svar4 +"'>" + lista[i].svar4 + "<br />" + 
-                ////  "<br /> </form>";
-
-                //rd11.InnerText = lista[i].svar1;
-                //rd22.InnerText = lista[i].svar2;
-                //rd33.InnerText = lista[i].svar3;
-                //rd44.InnerText = lista[i].svar4;
-                //div.InnerHtml = fråga;
-               
-                //div.Controls.Add(rd1);
-                //div.Controls.Add(rd11);
-                //div.Controls.Add(rd2);
-                //div.Controls.Add(rd22);
-                //div.Controls.Add(rd3);
-                //div.Controls.Add(rd33);
-                //div.Controls.Add(rd4);
-                //div.Controls.Add(rd44);
-                //test.Controls.Add(div);
-                
-                
+                //RequiredFieldValidator che = new RequiredFieldValidator();
+                //che.ControlToValidate = "gn" + i.ToString();
+                //che.Text = "Svara på frågan";
+                //test.Controls.Add(che);
                 
             }
         }
