@@ -10,7 +10,7 @@
         <svar id="3">Förbättrat penningvärde</svar>
         <svar id="4">En fastighets belåningsgrad</svar>
       </svarsalternativ>
-      <user_svar>En maträtt</user_svar>
+      <user_svar>Försämrat penningvärde</user_svar>
     </fråga>
     <fråga id="2">
       <text bild="">Vad är LAS?</text>
@@ -30,7 +30,7 @@
         <svar id="rätt">Människa</svar>
         <svar id="4">Räka</svar>
       </svarsalternativ>
-      <user_svar>Räka</user_svar>
+      <user_svar>Människa</user_svar>
     </fråga>
     <fråga id="4">
       <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
@@ -40,7 +40,7 @@
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
-      <user_svar>En blåval</user_svar>
+      <user_svar>En hund</user_svar>
     </fråga>
     <fråga id="5">
       <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
@@ -50,7 +50,6 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Ja, självklart</user_svar>
     </fråga>
   </provdel>
   <provdel ID="2">
@@ -63,7 +62,7 @@
         <svar id="3">Förbättrat penningvärde</svar>
         <svar id="4">En fastighets belåningsgrad</svar>
       </svarsalternativ>
-      <user_svar>En fastighets belåningsgrad</user_svar>
+      <user_svar>Försämrat penningvärde</user_svar>
     </fråga>
     <fråga id="7">
       <text bild="">Vad är LAS?</text>
@@ -83,7 +82,7 @@
         <svar id="rätt">Människa</svar>
         <svar id="4">Räka</svar>
       </svarsalternativ>
-      <user_svar>Räka</user_svar>
+      <user_svar>Människa</user_svar>
     </fråga>
     <fråga id="9">
       <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
@@ -93,7 +92,7 @@
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
-      <user_svar>En groda</user_svar>
+      <user_svar>En hund</user_svar>
     </fråga>
     <fråga id="10">
       <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
@@ -103,7 +102,7 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Nej</user_svar>
+      <user_svar>Ja, självklart</user_svar>
     </fråga>
   </provdel>
   <provdel ID="3">
@@ -116,7 +115,7 @@
         <svar id="3">Förbättrat penningvärde</svar>
         <svar id="4">En fastighets belåningsgrad</svar>
       </svarsalternativ>
-      <user_svar>En maträtt</user_svar>
+      <user_svar>Försämrat penningvärde</user_svar>
     </fråga>
     <fråga id="12">
       <text bild="">Vad är LAS?</text>
@@ -136,7 +135,7 @@
         <svar id="rätt">Människa</svar>
         <svar id="4">Räka</svar>
       </svarsalternativ>
-      <user_svar>Kalkon</user_svar>
+      <user_svar>Människa</user_svar>
     </fråga>
     <fråga id="14">
       <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
@@ -156,7 +155,7 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Vad är ett betalkort?</user_svar>
+      <user_svar>Ja, självklart</user_svar>
     </fråga>
   </provdel>
 </kunskapsprov>

@@ -222,10 +222,21 @@ namespace JE_Bank
         public void skrivTillXml(string valt_svar, int provdelID, int frågaID)
         {
             Provklass p = new Provklass();
-            p.userID = 1; // ska komma från click_event
+            p.userID = 2; // ska komma från click_event
+            
             string path = Server.MapPath(@"xml\kunskap.xml");
+            string path2 = Server.MapPath(@"xml\" + p.userID + ".xml");
             XmlDocument doc = new XmlDocument();
-            doc.Load(path);
+
+            if(path2 == null || frågaID == 1)
+            {
+                doc.Load(path);
+            }
+            else
+            {
+                doc.Load(path2);
+            }
+            
             XmlNode root = doc.DocumentElement;
 
             XmlElement user_svar = doc.CreateElement("user_svar");
