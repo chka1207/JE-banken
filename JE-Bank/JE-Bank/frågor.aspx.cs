@@ -13,14 +13,27 @@ namespace JE_Bank
     {
         List<Fråga> lista = new List<Fråga>();
         private Dictionary<string, Control> fDynamicControls = new Dictionary<string, Control>();
-       
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            RadioButton radio = new RadioButton();
+            radio.ID = "banan";
+            radio.Text = "hej";
+            test.Controls.Add(radio);
+          //      laddaFragor();
+            
+        }
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            ContentPlaceHolder MainC = (ContentPlaceHolder)Page.Master.FindControl("ContentPlaceHolder1");
+            
+            var rd1 = (RadioButton)MainC.FindControl("test").FindControl("banan");
+            rd1.Text = "hejigen";
             if (!IsPostBack)
             {
-                laddaFragor();
+
             }
-            lista = XmlToList();
+           // lista = XmlToList();
         }
 
         public void laddaFragor()
@@ -43,7 +56,7 @@ namespace JE_Bank
                 HtmlInputRadioButton rd4 = new HtmlInputRadioButton();
                 HtmlGenericControl rd44 = new HtmlGenericControl("span");
                 div.Attributes.Add("Id","gurka");
-                rd1.Attributes.Add("Id","fel");
+                rd1.ID = "rd1"+i.ToString();
                 rd2.Attributes.Add("Id",lista[i].svar2);
                 rd3.Attributes.Add("Id", lista[i].svar3  );
                 rd4.Attributes.Add("Id", lista[i].svar4  );
@@ -153,32 +166,35 @@ namespace JE_Bank
         protected void Ratta_Click(object sender, EventArgs e)
         {
             
-
-            Control ctrl = this.FindControlRecursive("fel");
-            
-            int r =0;
-            for (int i = 0; i < lista.Count; i++)
-            {
-                
-
-             //  Control c = fDynamicControls["fel"];
-             //  Control ctrl = (ContentPlaceHolder)Page.FindControl("fel");
-                
-                RadioButton rd1 = (RadioButton)Page.FindControl("fel");
-                RadioButton rd2 = this.FindControl("ContentPlaceholder1_test").FindControl(lista[i].svar2) as RadioButton;
-                RadioButton rd3 = Page.FindControl(lista[i].svar3) as RadioButton;
-                RadioButton rd4 = Page.FindControl(lista[i].svar4) as RadioButton;
+            //Blir null
+     //       Control ctrl = this.FindControlRecursive("fel");
 
 
-                //if (rd1.Checked)
-                //{
-                //    r++;
-                //}
-            }
-            
-                
+            //int r =0;
+            //for (int i = 0; i < lista.Count; i++)
+            //{
+
+
+
+            //           //  Control c = fDynamicControls["fel"];
+            //           //  Control ctrl = (ContentPlaceHolder)Page.FindControl("fel");
+
+
+            //    // fungerar ej
+            // //   RadioButton rd2 = this.FindControl("ContentPlaceholder1_test").FindControl(lista[i].svar2) as RadioButton;
+            //    RadioButton rd3 = Page.FindControl(lista[i].svar3) as RadioButton;
+            //    RadioButton rd4 = Page.FindControl(lista[i].svar4) as RadioButton;
+
+
+            //    //if (rd1.Checked)
+            //    //{
+            //    //    r++;
+            //    //}
+            //}
+
+
         }
-       
+
 
 
     }
