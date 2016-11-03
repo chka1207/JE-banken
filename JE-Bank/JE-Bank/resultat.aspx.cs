@@ -21,23 +21,14 @@ namespace JE_Bank
 
         public void Laddaresultat()
         {
-            //if (null!=Session["resul"].ToString())
-            //{
-            //    string resultat1 = Session["Resul"].ToString();
-            //    string del1 = Session["del1"].ToString();
-            //    string del2 = Session["del2"].ToString();
-            //    string del3 = Session["del3"].ToString();
-            //    //if ()
-                //{
-
-                //}
-
-
-
-
-            //    resultat.InnerText = resultat1 + " " + del1 + " " + del2 + " " + del3;
-            //}
-                        
+            if (Session["resul"] != null)
+            { 
+            string resultat1 = Session["Resul"].ToString();
+            string del1 = Session["del1"].ToString();
+            string del2 = Session["del2"].ToString();
+            string del3 = Session["del3"].ToString();
+            resultat.InnerText = "Totalt resultat: " +resultat1 + " Del 1: " + del1 + " Del 2: " + del2 + " Del 3: " + del3;
+            }
         }
         public void resultat_db()
         {
