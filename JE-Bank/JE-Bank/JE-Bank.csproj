@@ -78,6 +78,7 @@
     <Content Include="script\script.js" />
     <Content Include="Site.Master" />
     <Content Include="test.aspx" />
+    <Content Include="xml\1.xml" />
     <Content Include="xml\kunskap.xml">
       <SubType>Designer</SubType>
     </Content>

@@ -147,6 +147,7 @@ namespace JE_Bank
                 f.fråga = node["text"].InnerText;
                 f.provdel = node.ParentNode["namn"].InnerText;
                 f.provdelID = Convert.ToUInt16(node.ParentNode.Attributes["ID"].InnerText);
+                f.frågaID = Convert.ToUInt16(node.Attributes["id"].InnerText);
                 f.bild = node["text"].Attributes["bild"].InnerText;
                 f.svar1 = node.ChildNodes[1].ChildNodes[0].InnerText;
                 f.svar2 = node.ChildNodes[1].ChildNodes[1].InnerText;
@@ -204,6 +205,8 @@ namespace JE_Bank
                         {
                             del3++;
                         }
+
+                        skrivTillXml(rd1.Text, lista[i].provdelID, lista[i].frågaID); 
                     }
                 }
             }
@@ -215,7 +218,28 @@ namespace JE_Bank
             Response.Redirect("~/resultat.aspx");
 
         }
-       
+
+        public void skrivTillXml(string valt_svar, int provdelID, int frågaID)
+        {
+            Provklass p = new Provklass();
+            p.userID = 1; // ska komma från click_event
+            string path = Server.MapPath(@"xml\kunskap.xml");
+            XmlDocument doc = new XmlDocument();
+            doc.Load(path);
+            XmlNode root = doc.DocumentElement;
+
+            XmlElement user_svar = doc.CreateElement("user_svar");
+            XmlNodeList node = doc.SelectNodes("/kunskapsprov/provdel[@ID='"+provdelID+"']/fråga[@id='"+frågaID+"']");
+            user_svar.InnerText = valt_svar;
+            node[0].AppendChild(user_svar);
+            
+            string nyttxml = Server.MapPath(@"xml\" + p.userID + ".xml");
+
+            doc.Save(nyttxml);
+            p.xmldatabas = doc.ToString();
+
+        }
+
 
 
     }
