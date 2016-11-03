@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Npgsql;
 
 namespace JE_Bank
 {
@@ -11,12 +12,59 @@ namespace JE_Bank
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string resultat1 = Session["Resul"].ToString();
-            string del1 = Session["del1"].ToString();
-            string del2 = Session["del2"].ToString();
-            string del3 = Session["del3"].ToString();
-
-            resultat.InnerText = resultat1 +" "+ del1 +" "+del2+" "+del3;
+            if (!IsPostBack)
+            {
+                Laddaresultat();
+                resultat_db();
+            }
         }
+
+        public void Laddaresultat()
+        {
+            //if (null!=Session["resul"].ToString())
+            //{
+            //    string resultat1 = Session["Resul"].ToString();
+            //    string del1 = Session["del1"].ToString();
+            //    string del2 = Session["del2"].ToString();
+            //    string del3 = Session["del3"].ToString();
+            //    //if ()
+                //{
+
+                //}
+
+
+
+
+            //    resultat.InnerText = resultat1 + " " + del1 + " " + del2 + " " + del3;
+            //}
+                        
+        }
+        public void resultat_db()
+        {
+            
+            Provklass p = new Provklass();
+            p.HämtafrånDb("6");
+            if (p.godkänd_kunskap == true)
+            {
+                lbkunskapG.Text = "Godkänd";
+            }
+            else
+            {
+                lbkunskapG.Text = "Underkänd";
+            }
+            if (p.gjort_licens == true)
+            {
+                lbLicensG.Text = "Godkänd";
+            }
+            else
+            {
+                lbLicensG.Text = "Underkänd";
+            }
+            lbkunskapD.Text = p.kunskap.ToShortDateString();
+            lbLicensD.Text = p.licens.ToShortDateString();
+
+        }
+
+       
     }
 }

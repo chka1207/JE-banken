@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Threading.Tasks;
 using System.Data;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,7 @@ namespace JE_Bank
         private NpgsqlConnection _conn;
         private NpgsqlCommand _cmd;
         private NpgsqlDataReader _dr;
-        public DataTable _tablell;
+        public DataTable _tablell = new DataTable();
         private string _fel;
         public static List<NpgsqlParameter> lista { get; set; }
         public postgres()
