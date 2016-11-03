@@ -170,6 +170,7 @@ namespace JE_Bank
 
                 f.fråga = node["text"].InnerText;
                 f.provdel = node.ParentNode["namn"].InnerText;
+                f.provdelID = Convert.ToUInt16(node.ParentNode.Attributes["ID"].InnerText);
                 f.bild = node["text"].Attributes["bild"].InnerText;
                 f.svar1 = node.ChildNodes[1].ChildNodes[0].InnerText;
                 f.svar2 = node.ChildNodes[1].ChildNodes[1].InnerText;
