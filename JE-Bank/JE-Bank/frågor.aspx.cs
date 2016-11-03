@@ -52,8 +52,16 @@ namespace JE_Bank
                     fråga = "<br />" + lista[i].provdel + "<br />" + lista[i].fråga + "<br />";
                 }
                 div.InnerHtml = fråga;
+                //RadioButtonList rdlist = new RadioButtonList();
+                //rdlist.ID = "rbli" + i.ToString();
+                //rdlist.Items.Add(lista[i].svar1);
+                //rdlist.Items.Add(lista[i].svar2);
+                //rdlist.Items.Add(lista[i].svar3);
+                //rdlist.Items.Add(lista[i].svar4);
+
                 for (int r = 0; r < 4; r++)
                 {
+                    
                     RadioButton radio = new RadioButton();
                     radio.ID = "rd"+i.ToString()+r.ToString();
                     radio.GroupName = "gn"+i.ToString();
@@ -78,11 +86,12 @@ namespace JE_Bank
                     div.Controls.Add(radio);
                 }
                 test.Controls.Add(div);
+                //test.Controls.Add(rdlist);
                 //RequiredFieldValidator che = new RequiredFieldValidator();
-                //che.ControlToValidate = "gn" + i.ToString();
+                //che.ControlToValidate = "rbli" + i.ToString();
                 //che.Text = "Svara på frågan";
                 //test.Controls.Add(che);
-                
+
             }
         }
 
