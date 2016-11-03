@@ -16,15 +16,18 @@ namespace JE_Bank
 
         protected void Page_Init(object sender, EventArgs e)
         {
-
-        }
-        protected void Page_Load(object sender, EventArgs e)
-        {
             if (!IsPostBack)
             {
                 laddaFragor();
             }
             lista = XmlToList();
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            
+            
+            
+            
         }
 
         public void laddaFragor()
@@ -46,6 +49,8 @@ namespace JE_Bank
                 HtmlGenericControl rd33 = new HtmlGenericControl("span");
                 HtmlInputRadioButton rd4 = new HtmlInputRadioButton();
                 HtmlGenericControl rd44 = new HtmlGenericControl("span");
+
+
                 div.Attributes.Add("Id","gurka");
                 rd1.Attributes.Add("Id","fel");
                 rd2.Attributes.Add("Id",lista[i].svar2);
@@ -166,8 +171,8 @@ namespace JE_Bank
 
         protected void Ratta_Click(object sender, EventArgs e)
         {
-            
 
+            
             Control ctrl = this.FindControlRecursive("fel");
             
             int r =0;
