@@ -41,11 +41,7 @@ namespace JE_Bank
             for (int i = 0; i < lista.Count; i++)
             {
                 HtmlGenericControl div = new HtmlGenericControl("div");
-                //if (lista[i].provdel)
-                //{
-
-                //}
-                //div.ID= 
+                div.ID = lista[i].provdelID.ToString()+i.ToString();
                 if (lista[i].bild != "")
                 {
                     string bild = "<img src='" + lista[i].bild + "'>";
@@ -161,9 +157,17 @@ namespace JE_Bank
         }
         public List<Fråga> XmlToList()
         {
+            string path;
             List<Fråga> x = new List<Fråga>();
-
-            string path = Server.MapPath(@"xml\kunskap.xml");
+            if ("kunskap" == Server.UrlDecode(Request.QueryString["Data"]))
+            {
+                 path = Server.MapPath(@"xml\kunskap.xml");
+            }
+            else
+            {
+                 path = Server.MapPath(@"xml\licens.xml");
+            }
+            
             XmlDocument doc = new XmlDocument();
             doc.Load(path);
             XmlNodeList provdel = doc.SelectNodes("/kunskapsprov/provdel/fråga");
@@ -210,23 +214,38 @@ namespace JE_Bank
         protected void Ratta_Click(object sender, EventArgs e)
         {
             int resultat = 0;
+            int del1 =0, del2 =0, del3=0;
             ContentPlaceHolder MainC = (ContentPlaceHolder)Page.Master.FindControl("ContentPlaceHolder1");
 
             for (int i = 0; i < lista.Count; i++)
             {
+                
                 for (int r = 0; r < 4; r++)
                 {
                     var rd1 = (RadioButton)MainC.FindControl("test").FindControl("rd"+i.ToString()+r.ToString());
                     if(rd1.Checked)
                     {
-                        if(rd1.Text== lista[i].rättSvar)
+                        if(rd1.Text== lista[i].rättSvar && 1 == lista[i].provdelID)
                         {
-                            resultat++;
+                            del1++;
+                        }
+                        if (rd1.Text == lista[i].rättSvar && 2  == lista[i].provdelID )
+                        {
+                            del2++;
+                        }
+                        if (rd1.Text == lista[i].rättSvar &&  3== lista[i].provdelID)
+                        {
+                            del3++;
                         }
                     }
                 }
             }
-            
+            resultat = del1 + del2 + del3;
+            Session["Resul"] = resultat;
+            Session["del1"] = del1;
+            Session["del2"] = del2;
+            Session["del3"] = del3;
+            Response.Redirect("~/resultat.aspx");
 
         }
        

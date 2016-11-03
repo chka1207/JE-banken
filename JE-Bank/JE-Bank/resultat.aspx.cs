@@ -11,7 +11,12 @@ namespace JE_Bank
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string resultat1 = Session["Resul"].ToString();
+            string del1 = Session["del1"].ToString();
+            string del2 = Session["del2"].ToString();
+            string del3 = Session["del3"].ToString();
 
+            resultat.InnerText = resultat1 +" "+ del1 +" "+del2+" "+del3;
         }
     }
 }

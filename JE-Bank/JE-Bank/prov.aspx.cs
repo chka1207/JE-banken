@@ -17,12 +17,12 @@ namespace JE_Bank
 
         protected void startTest_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/frågor.aspx?data=" + Server.UrlEncode("kunskap"));
         }
 
         protected void licensprovStart_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/frågor.aspx?data=" + Server.UrlEncode("licens"));
         }
     }
 }
