@@ -13,7 +13,11 @@ namespace JE_Bank
     {
         List<Fråga> lista = new List<Fråga>();
         private Dictionary<string, Control> fDynamicControls = new Dictionary<string, Control>();
-       
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
