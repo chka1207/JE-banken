@@ -41,6 +41,11 @@ namespace JE_Bank
             for (int i = 0; i < lista.Count; i++)
             {
                 HtmlGenericControl div = new HtmlGenericControl("div");
+                //if (lista[i].provdel)
+                //{
+
+                //}
+                //div.ID= 
                 if (lista[i].bild != "")
                 {
                     string bild = "<img src='" + lista[i].bild + "'>";
