@@ -14,9 +14,11 @@ namespace JE_Bank
         {
             if (!IsPostBack)
             {
+                
                 Laddaresultat();
                 resultat_db();
             }
+           
         }
 
         public void Laddaresultat()
@@ -24,9 +26,33 @@ namespace JE_Bank
             if (Session["resul"] != null)
             { 
             string resultat1 = Session["Resul"].ToString();
-            string del1 = Session["del1"].ToString();
-            string del2 = Session["del2"].ToString();
-            string del3 = Session["del3"].ToString();
+            int del1 = Convert.ToInt16(Session["del1"].ToString());
+            int del2 = Convert.ToInt16(Session["del2"].ToString());
+            int del3 = Convert.ToInt16(Session["del3"].ToString());
+                double del11;
+                double del21;
+                double del31;
+                double total;
+
+            if (resultat1 == "15")
+                {
+                    del11 = del1 / 5 * 100;
+                    del21 = del2 / 5 * 100;
+                    del31 = del3 / 5 * 100;
+                    total = (del1 + del2 + del3) / 15 * 100;
+                    
+                }
+            else
+                {
+                    del11 = del1 / 10 * 100;
+                    del21 = del2 / 5 * 100;
+                    del31 = del3 / 10 * 100;
+                    total = (del1 + del2 + del3) / 25 * 100;
+                }
+            if (total> 69&& del11 > 59 && del21 >59 && del31 >59)
+                {
+                    resultat.InnerText = "GODKÄND";
+                }
             resultat.InnerText = "Totalt resultat: " +resultat1 + " Del 1: " + del1 + " Del 2: " + del2 + " Del 3: " + del3;
             }
         }

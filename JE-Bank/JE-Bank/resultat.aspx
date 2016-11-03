@@ -7,10 +7,11 @@
         <div class="box"> 
             <h5> Här kan du se ditt senaste resultat</h5>
             <div id="resultat" runat="server"> </div>
-            
+            <asp:Label ID="lbprov" runat="server" Text="hejåhåå" Visible="false"></asp:Label>
             <div>
             <h5> Dina resultat</h5>
                 <div class ="result">
+                    
                     <p>Typ av prov</p>
                     <div> <asp:Label ID="lbtypav1" runat="server" Text="Kunskapsprov"></asp:Label> </div>
                     <div><asp:Label ID="lbtypav2" runat="server" Text="Licensprov"></asp:Label> </div>
