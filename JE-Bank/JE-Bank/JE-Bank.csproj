@@ -73,6 +73,7 @@
     <Content Include="admin.aspx" />
     <Content Include="kunskap.aspx" />
     <Content Include="frågor.aspx" />
+    <Content Include="licensprov.aspx" />
     <Content Include="packages.config" />
     <Content Include="prov.aspx" />
     <Content Include="resultat.aspx" />
@@ -130,6 +131,13 @@
     </Compile>
     <Compile Include="kunskap.aspx.designer.cs">
       <DependentUpon>kunskap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="licensprov.aspx.cs">
+      <DependentUpon>licensprov.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="licensprov.aspx.designer.cs">
+      <DependentUpon>licensprov.aspx</DependentUpon>
     </Compile>
     <Compile Include="postgres.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

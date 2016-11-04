@@ -22,7 +22,8 @@ namespace JE_Bank
 
         protected void licensprovStart_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/frågor.aspx?data=" + Server.UrlEncode("licens"));
+            Response.Redirect("~/licensprov.aspx");
+            
         }
     }
 }

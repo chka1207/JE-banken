@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<kunskapsprov>
+<licensprov>
   <provdel ID="1">
     <namn>Produkter och hantering av kundens affärer</namn>
     <fråga id="1">
@@ -20,7 +20,7 @@
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
-      <user_svar>Lagen om anställningsskydd</user_svar>
+      <user_svar>En person vid namn Lars-Anders Svensson</user_svar>
     </fråga>
     <fråga id="3">
       <text bild="">Vilket djur är ett däggdjur?</text>
@@ -30,7 +30,7 @@
         <svar id="rätt">Människa</svar>
         <svar id="4">Räka</svar>
       </svarsalternativ>
-      <user_svar>Människa</user_svar>
+      <user_svar>Gädda</user_svar>
     </fråga>
     <fråga id="4">
       <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
@@ -40,7 +40,7 @@
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
-      <user_svar>En hund</user_svar>
+      <user_svar>En björn</user_svar>
     </fråga>
     <fråga id="5">
       <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
@@ -50,11 +50,8 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Nej</user_svar>
+      <user_svar>Vad är ett betalkort?</user_svar>
     </fråga>
-  </provdel>
-  <provdel ID="2">
-    <namn>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</namn>
     <fråga id="6">
       <text bild="">Vad är inflation?</text>
       <svarsalternativ>
@@ -63,7 +60,7 @@
         <svar id="3">Förbättrat penningvärde</svar>
         <svar id="4">En fastighets belåningsgrad</svar>
       </svarsalternativ>
-      <user_svar>En maträtt</user_svar>
+      <user_svar>Försämrat penningvärde</user_svar>
     </fråga>
     <fråga id="7">
       <text bild="">Vad är LAS?</text>
@@ -73,7 +70,7 @@
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
-      <user_svar>Lunds Aktiesällskap</user_svar>
+      <user_svar>En person vid namn Lars-Anders Svensson</user_svar>
     </fråga>
     <fråga id="8">
       <text bild="">Vilket djur är ett däggdjur?</text>
@@ -83,7 +80,7 @@
         <svar id="rätt">Människa</svar>
         <svar id="4">Räka</svar>
       </svarsalternativ>
-      <user_svar>Människa</user_svar>
+      <user_svar>Gädda</user_svar>
     </fråga>
     <fråga id="9">
       <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
@@ -93,7 +90,7 @@
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
-      <user_svar>En hund</user_svar>
+      <user_svar>En björn</user_svar>
     </fråga>
     <fråga id="10">
       <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
@@ -103,11 +100,11 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Ja, självklart</user_svar>
+      <user_svar>Vad är ett betalkort?</user_svar>
     </fråga>
   </provdel>
-  <provdel ID="3">
-    <namn>Etik och regelverk</namn>
+  <provdel ID="2">
+    <namn>Ekonomi - nationalekonomi, finansiell ekonomi och privatekonomi</namn>
     <fråga id="11">
       <text bild="">Vad är inflation?</text>
       <svarsalternativ>
@@ -126,7 +123,7 @@
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
-      <user_svar>Lagen om anställningsskydd</user_svar>
+      <user_svar>En person vid namn Lars-Anders Svensson</user_svar>
     </fråga>
     <fråga id="13">
       <text bild="">Vilket djur är ett däggdjur?</text>
@@ -136,7 +133,7 @@
         <svar id="rätt">Människa</svar>
         <svar id="4">Räka</svar>
       </svarsalternativ>
-      <user_svar>Människa</user_svar>
+      <user_svar>Gädda</user_svar>
     </fråga>
     <fråga id="14">
       <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
@@ -146,7 +143,7 @@
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
-      <user_svar>En hund</user_svar>
+      <user_svar>En björn</user_svar>
     </fråga>
     <fråga id="15">
       <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
@@ -156,7 +153,110 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Ja, självklart</user_svar>
+      <user_svar>Vad är ett betalkort?</user_svar>
     </fråga>
   </provdel>
-</kunskapsprov>
+  <provdel ID="3">
+    <namn>Etik och regelverk</namn>
+    <fråga id="16">
+      <text bild="">Vad är inflation?</text>
+      <svarsalternativ>
+        <svar id="rätt">Försämrat penningvärde</svar>
+        <svar id="2">En maträtt</svar>
+        <svar id="3">Förbättrat penningvärde</svar>
+        <svar id="4">En fastighets belåningsgrad</svar>
+      </svarsalternativ>
+      <user_svar>Försämrat penningvärde</user_svar>
+    </fråga>
+    <fråga id="17">
+      <text bild="">Vad är LAS?</text>
+      <svarsalternativ>
+        <svar id="1">En person vid namn Lars-Anders Svensson</svar>
+        <svar id="rätt">Lagen om anställningsskydd</svar>
+        <svar id="3">Lunds Aktiesällskap</svar>
+        <svar id="4">Något helt annat</svar>
+      </svarsalternativ>
+      <user_svar>En person vid namn Lars-Anders Svensson</user_svar>
+    </fråga>
+    <fråga id="18">
+      <text bild="">Vilket djur är ett däggdjur?</text>
+      <svarsalternativ>
+        <svar id="1">Gädda</svar>
+        <svar id="2">Kalkon</svar>
+        <svar id="rätt">Människa</svar>
+        <svar id="4">Räka</svar>
+      </svarsalternativ>
+      <user_svar>Gädda</user_svar>
+    </fråga>
+    <fråga id="19">
+      <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
+      <svarsalternativ>
+        <svar id="1">En björn</svar>
+        <svar id="rätt">En hund</svar>
+        <svar id="3">En groda</svar>
+        <svar id="4">En blåval</svar>
+      </svarsalternativ>
+      <user_svar>En björn</user_svar>
+    </fråga>
+    <fråga id="20">
+      <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
+      <svarsalternativ>
+        <svar id="1">Vad är ett betalkort?</svar>
+        <svar id="2">Nej</svar>
+        <svar id="3">Vet ej</svar>
+        <svar id="rätt">Ja, självklart</svar>
+      </svarsalternativ>
+      <user_svar>Vad är ett betalkort?</user_svar>
+    </fråga>
+    <fråga id="21">
+      <text bild="">Vad är inflation?</text>
+      <svarsalternativ>
+        <svar id="rätt">Försämrat penningvärde</svar>
+        <svar id="2">En maträtt</svar>
+        <svar id="3">Förbättrat penningvärde</svar>
+        <svar id="4">En fastighets belåningsgrad</svar>
+      </svarsalternativ>
+      <user_svar>Försämrat penningvärde</user_svar>
+    </fråga>
+    <fråga id="22">
+      <text bild="">Vad är LAS?</text>
+      <svarsalternativ>
+        <svar id="1">En person vid namn Lars-Anders Svensson</svar>
+        <svar id="rätt">Lagen om anställningsskydd</svar>
+        <svar id="3">Lunds Aktiesällskap</svar>
+        <svar id="4">Något helt annat</svar>
+      </svarsalternativ>
+      <user_svar>En person vid namn Lars-Anders Svensson</user_svar>
+    </fråga>
+    <fråga id="23">
+      <text bild="">Vilket djur är ett däggdjur?</text>
+      <svarsalternativ>
+        <svar id="1">Gädda</svar>
+        <svar id="2">Kalkon</svar>
+        <svar id="rätt">Människa</svar>
+        <svar id="4">Räka</svar>
+      </svarsalternativ>
+      <user_svar>Gädda</user_svar>
+    </fråga>
+    <fråga id="24">
+      <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
+      <svarsalternativ>
+        <svar id="1">En björn</svar>
+        <svar id="rätt">En hund</svar>
+        <svar id="3">En groda</svar>
+        <svar id="4">En blåval</svar>
+      </svarsalternativ>
+      <user_svar>En björn</user_svar>
+    </fråga>
+    <fråga id="25">
+      <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
+      <svarsalternativ>
+        <svar id="1">Vad är ett betalkort?</svar>
+        <svar id="2">Nej</svar>
+        <svar id="3">Vet ej</svar>
+        <svar id="rätt">Ja, självklart</svar>
+      </svarsalternativ>
+      <user_svar>Vad är ett betalkort?</user_svar>
+    </fråga>
+  </provdel>
+</licensprov>
