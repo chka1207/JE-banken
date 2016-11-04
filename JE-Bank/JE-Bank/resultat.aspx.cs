@@ -5,16 +5,20 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Npgsql;
+using System.Xml;
+using System.Web.UI.HtmlControls;
 
 namespace JE_Bank
 {
     public partial class rasultat : System.Web.UI.Page
     {
+        List<Fråga> lista = new List<Fråga>();
+        private Dictionary<string, Control> fDynamicControls = new Dictionary<string, Control>();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                
+                laddaProv();
                 Laddaresultat();
                 resultat_db();
             }
@@ -103,6 +107,87 @@ namespace JE_Bank
 
         }
 
-       
+        public List<Fråga> XmlToList(XmlDocument xml_doc)
+        {
+            
+            
+            List<Fråga> x = new List<Fråga>();
+
+
+            XmlDocument doc = xml_doc;
+            
+            XmlNodeList provdel = doc.SelectNodes("/kunskapsprov/provdel/fråga");
+
+
+            foreach (XmlNode node in provdel)
+            {
+                Fråga f = new Fråga();
+
+                f.fråga = node["text"].InnerText;
+                f.provdel = node.ParentNode["namn"].InnerText;
+                f.provdelID = Convert.ToUInt16(node.ParentNode.Attributes["ID"].InnerText);
+                f.frågaID = Convert.ToUInt16(node.Attributes["id"].InnerText);
+                f.bild = node["text"].Attributes["bild"].InnerText;
+                f.svar1 = node.ChildNodes[1].ChildNodes[0].InnerText;
+                f.svar2 = node.ChildNodes[1].ChildNodes[1].InnerText;
+                f.svar3 = node.ChildNodes[1].ChildNodes[2].InnerText;
+                f.svar4 = node.ChildNodes[1].ChildNodes[3].InnerText;
+                f.user_svar = node.ChildNodes[2].ChildNodes[0].InnerText;
+
+
+                if (node.ChildNodes[1].ChildNodes[0].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[0].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[1].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[1].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[2].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[2].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[3].Attributes["id"].InnerText == "rätt")
+                {
+                    f.rättSvar = node.ChildNodes[1].ChildNodes[3].InnerText;
+                }
+
+                x.Add(f);
+            }
+
+
+            return x;
+        }
+
+        public void laddaProv()
+        {
+            Provklass p = new Provklass();
+            p.userID = 3; //hårdkodat
+            XmlDocument doc = p.DatabasTillXml(p.userID);
+            lista = XmlToList(doc);
+
+            string fråga;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                HtmlGenericControl div = new HtmlGenericControl("div");
+                div.ID = lista[i].provdelID.ToString() + i.ToString();
+                if (lista[i].bild != "")
+                {
+                    string bild = "<img src='" + lista[i].bild + "'>";
+                    fråga = "<br />" + lista[i].provdel + "<br />" + bild + "<br/>" + lista[i].fråga + "<br />" + "Rätt svar: " + lista[i].rättSvar + "<br/>" + "Ditt svar: " + lista[i].user_svar;
+                }
+                else
+                {
+                    fråga = "<br />" + lista[i].provdel + "<br />" + lista[i].fråga + "<br />" + "Rätt svar: " + lista[i].rättSvar + "<br/>" + "Ditt svar: " + lista[i].user_svar;
+                }
+                div.InnerHtml = fråga;
+                test.Controls.Add(div);
+               
+
+            }
+        }
+
+
+
     }
 }
