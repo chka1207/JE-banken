@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Npgsql;
 using System.Data;
+using System.Xml;
 
 namespace JE_Bank
 {
@@ -59,6 +60,27 @@ namespace JE_Bank
                 new NpgsqlParameter("@par1", user_id),
                 new NpgsqlParameter("@par2", xml)
             });
+        }
+        public XmlDocument DatabasTillXml(int user_id)
+        {
+            userID = user_id;
+            string id = Convert.ToString(user_id);
+            string xml;
+
+            XmlDocument doc = new XmlDocument();
+
+            postgres x = new postgres();
+            x.SqlFrågaParameters("select xml from users where user_id = @par1;", postgres.lista = new List<NpgsqlParameter>()
+            {
+                new NpgsqlParameter("@par1", id)
+            });
+            foreach(DataRow d in x._tablell.Rows)
+            {
+                doc.LoadXml(d["xml"].ToString());
+
+            }
+                        
+            return doc;
         }
     }
 }
