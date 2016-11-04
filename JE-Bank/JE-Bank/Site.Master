@@ -26,6 +26,7 @@
                     <li><a runat="server" id="hem"  href="Index.aspx">Hem</a></li>        
                     <li><a runat="server" id="Lprov"  href="prov.aspx">Prov</a></li>        
                     <li><a runat="server" id="Lresultat" href="resultat.aspx">Mina Resultat</a></li>
+                    <li><a runat="server" id="Ladmin" href="admin.aspx">Admin</a></li>
                 </ul>
             </div>
              <div class="front">

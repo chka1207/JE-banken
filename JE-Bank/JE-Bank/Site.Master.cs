@@ -26,6 +26,10 @@ namespace JE_Bank
                 case "resultat_aspx":
                     Lresultat.Attributes.Add("class", "active");
                     break;
+                case "admin_aspx":
+                    Ladmin.Attributes.Add("class", "active");
+                    break;
+
             }
         }
 
