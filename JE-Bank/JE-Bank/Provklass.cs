@@ -125,6 +125,36 @@ namespace JE_Bank
 
             return prov;
         }
+        public void laddaUppResultat(int id, bool resultat, string typ)
+        {
+            userID = id;
+            string idprov, iddatum;
+            if (typ == "25")
+            {
+                idprov = "gjort_licens";
+                iddatum = "datum_licens";
+
+            }
+            else
+            {
+                idprov = "gjort_licens";
+                iddatum = "datum_licens";
+            }
+
+            
+            string user_id = Convert.ToString(id);
+
+            postgres x = new postgres();
+            x.SqlParameters("update users set @par2 = @par4, @par3 = @par5 where user_id = @par1;", postgres.lista = new List<NpgsqlParameter>()
+            {
+                new NpgsqlParameter("@par1", user_id),
+                new NpgsqlParameter("@par2", idprov),
+                new NpgsqlParameter("@par3", iddatum),
+                new NpgsqlParameter("@par4", resultat),
+                new NpgsqlParameter("@par3", DateTime.Now)
+
+            });
+        }
 
     }
 }
