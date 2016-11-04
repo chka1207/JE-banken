@@ -112,12 +112,18 @@ namespace JE_Bank
             
             
             List<Fråga> x = new List<Fråga>();
-
+            
 
             XmlDocument doc = xml_doc;
-            
+            XmlNode root = doc.DocumentElement;
             XmlNodeList provdel = doc.SelectNodes("/kunskapsprov/provdel/fråga");
 
+
+            if (root.Name == "licensprov")
+            {
+                provdel = doc.SelectNodes("/licensprov/provdel/fråga");
+            }
+            
 
             foreach (XmlNode node in provdel)
             {
@@ -128,11 +134,26 @@ namespace JE_Bank
                 f.provdelID = Convert.ToUInt16(node.ParentNode.Attributes["ID"].InnerText);
                 f.frågaID = Convert.ToUInt16(node.Attributes["id"].InnerText);
                 f.bild = node["text"].Attributes["bild"].InnerText;
-                f.svar1 = node.ChildNodes[1].ChildNodes[0].InnerText;
-                f.svar2 = node.ChildNodes[1].ChildNodes[1].InnerText;
-                f.svar3 = node.ChildNodes[1].ChildNodes[2].InnerText;
-                f.svar4 = node.ChildNodes[1].ChildNodes[3].InnerText;
-                f.user_svar = node.ChildNodes[2].ChildNodes[0].InnerText;
+                if (node.ChildNodes[1].ChildNodes[0].InnerText != null)
+                {
+                    f.svar1 = node.ChildNodes[1].ChildNodes[0].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[1].InnerText != null)
+                {
+                    f.svar2 = node.ChildNodes[1].ChildNodes[1].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[2].InnerText != null)
+                {
+                    f.svar3 = node.ChildNodes[1].ChildNodes[2].InnerText;
+                }
+                if (node.ChildNodes[1].ChildNodes[3].InnerText != null)
+                {
+                    f.svar4 = node.ChildNodes[1].ChildNodes[3].InnerText;
+                }
+                if (node.ChildNodes[2].ChildNodes[0].InnerText != null)
+                {
+                    f.user_svar = node.ChildNodes[2].ChildNodes[0].InnerText;
+                }
 
 
                 if (node.ChildNodes[1].ChildNodes[0].Attributes["id"].InnerText == "rätt")

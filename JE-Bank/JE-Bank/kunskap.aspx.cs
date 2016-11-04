@@ -142,10 +142,10 @@ namespace JE_Bank
         //public void skrivTillXml()
         //{
         //    Provklass p = new Provklass();
-        //    p.userID = 1; // ska komma från click_event
+        //p.userID = 1; // ska komma från click_event
         //    string path = Server.MapPath(@"xml\kunskap.xml");
-        //    XmlDocument doc = new XmlDocument();
-        //    doc.Load(path);
+        //XmlDocument doc = new XmlDocument();
+        //doc.Load(path);
         //    XmlNode root = doc.DocumentElement;
 
         //    XmlElement user_svar = doc.CreateElement("user_svar");
@@ -161,7 +161,7 @@ namespace JE_Bank
 
         //    doc.Save(nyttxml);
         //    p.xmldatabas = doc.ToString();
-            
+
         //}
     }
 }
