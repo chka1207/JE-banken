@@ -57,6 +57,7 @@ namespace JE_Bank
                     RadioButton radio = new RadioButton();
                     radio.ID = "rd" + i.ToString() + r.ToString();
                     radio.GroupName = "gn" + i.ToString();
+                    radio.CssClass = "fråga";
                     string text = "";
                     if (r == 0)
                     {

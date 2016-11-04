@@ -65,13 +65,13 @@ namespace JE_Bank
             if (total1> 69&& del11 > 59 && del21 >59 && del31 >59)
                 {
                     lbresultat1.Text = "GODKÄND";
-                    p.laddaUppResultat(1, true, resultat1);
+                    p.laddaUppResultat(3, true, resultat1);
 
                 }
                 else
                 {
                     lbresultat1.Text = "INTE GODKÄND";
-                    p.laddaUppResultat(1, false, resultat1);
+                    p.laddaUppResultat(3, false, resultat1);
                 }
                 del11 = Math.Round(del11, 2);
                 del21 = Math.Round(del21, 2);
@@ -89,7 +89,7 @@ namespace JE_Bank
         {
             
             Provklass p = new Provklass();
-            p.HämtafrånDb("6");
+            p.HämtafrånDb("3");
             if (p.godkänd_kunskap == true)
             {
                 lbkunskapG.Text = "Godkänd";
