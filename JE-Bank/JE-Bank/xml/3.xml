@@ -50,7 +50,7 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Ja, självklart</user_svar>
+      <user_svar>Nej</user_svar>
     </fråga>
   </provdel>
   <provdel ID="2">
@@ -63,7 +63,7 @@
         <svar id="3">Förbättrat penningvärde</svar>
         <svar id="4">En fastighets belåningsgrad</svar>
       </svarsalternativ>
-      <user_svar>Försämrat penningvärde</user_svar>
+      <user_svar>En maträtt</user_svar>
     </fråga>
     <fråga id="7">
       <text bild="">Vad är LAS?</text>
@@ -73,7 +73,7 @@
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
-      <user_svar>Lagen om anställningsskydd</user_svar>
+      <user_svar>Lunds Aktiesällskap</user_svar>
     </fråga>
     <fråga id="8">
       <text bild="">Vilket djur är ett däggdjur?</text>
