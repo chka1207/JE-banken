@@ -17,9 +17,7 @@
      <div class="container mobil plata">
             <div class="header">
                 <h1>JE Bank</h1>
-                <div class="change"> 
-                    <a runat="server" id="A1"  href="Index.aspx">Hem</a>
-                </div>
+               
             </div>
             <div id="nav" class="nav1 nav2" >
                 <ul >
