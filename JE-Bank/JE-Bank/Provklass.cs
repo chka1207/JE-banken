@@ -66,8 +66,7 @@ namespace JE_Bank
         {
             userID = user_id;
             string id = Convert.ToString(user_id);
-            string xml;
-
+            
             XmlDocument doc = new XmlDocument();
 
             postgres x = new postgres();
