@@ -82,6 +82,12 @@ div.front{
       display:inline-block;
 
        }
+.fråga{
+    display:table;
+    padding:4px;
+    text-decoration:none;
+    
+}
 .text{
     padding:2px 5px;
 }
@@ -90,9 +96,9 @@ div.front{
 img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: auto;
+    margin: 8px;
     border-radius: 5px;
+
   
 }
 .tooltip {

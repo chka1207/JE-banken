@@ -58,13 +58,15 @@ namespace JE_Bank
                 //rdlist.Items.Add(lista[i].svar2);
                 //rdlist.Items.Add(lista[i].svar3);
                 //rdlist.Items.Add(lista[i].svar4);
-
+                HtmlGenericControl div1 = new HtmlGenericControl("div");
+                div1.Attributes.Add("class", "result");
                 for (int r = 0; r < 4; r++)
                 {
                     
                     RadioButton radio = new RadioButton();
                     radio.ID = "rd"+i.ToString()+r.ToString();
                     radio.GroupName = "gn"+i.ToString();
+                    radio.CssClass = "fråga";
                     string text ="";
                     if(r ==0)
                     {
@@ -83,7 +85,8 @@ namespace JE_Bank
                         text = lista[i].svar4;
                     }
                     radio.Text = text;
-                    div.Controls.Add(radio);
+                    div1.Controls.Add(radio);
+                    div.Controls.Add(div1);
                 }
                 test.Controls.Add(div);
                 //test.Controls.Add(rdlist);

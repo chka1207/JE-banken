@@ -127,32 +127,38 @@ namespace JE_Bank
         public void laddaUppResultat(int id, bool resultat, string typ)
         {
             userID = id;
-            string idprov, iddatum;
+            string user_id = Convert.ToString(id);
+            
             if (typ == "25")
             {
-                idprov = "gjort_licens";
-                iddatum = "datum_licens";
+               
+                postgres x = new postgres();
+                x.SqlParameters("update users set gjort_licens = @par4, datum_licens= @par5 where user_id = @par1;", postgres.lista = new List<NpgsqlParameter>()
+            {
+                new NpgsqlParameter("@par1", user_id),
+                new NpgsqlParameter("@par4", resultat),
+                new NpgsqlParameter("@par5", DateTime.Now)
+
+            });
 
             }
             else
             {
-                idprov = "gjort_licens";
-                iddatum = "datum_licens";
+                
+                postgres x = new postgres();
+                x.SqlParameters("update users set godkänd_kunskap = @par4, datum_kunskap= @par5 where user_id = @par1;", postgres.lista = new List<NpgsqlParameter>()
+            {
+                new NpgsqlParameter("@par1", user_id),
+                new NpgsqlParameter("@par4", resultat),
+                new NpgsqlParameter("@par5", DateTime.Now)
+
+            });
             }
 
             
-            string user_id = Convert.ToString(id);
+            
 
-            postgres x = new postgres();
-            x.SqlParameters("update users set @par2 = @par4, @par3 = @par5 where user_id = @par1;", postgres.lista = new List<NpgsqlParameter>()
-            {
-                new NpgsqlParameter("@par1", user_id),
-                new NpgsqlParameter("@par2", idprov),
-                new NpgsqlParameter("@par3", iddatum),
-                new NpgsqlParameter("@par4", resultat),
-                new NpgsqlParameter("@par3", DateTime.Now)
-
-            });
+           
         }
 
     }
