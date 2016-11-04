@@ -3,4 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div><asp:Label ID="Lbadmin" runat="server"></asp:Label></div>
-</asp:Content>
+    <div><h4>Samtliga anställdas prov</h4></div>
+    <div id="listan" runat="server"></div>
+    </asp:Content>
