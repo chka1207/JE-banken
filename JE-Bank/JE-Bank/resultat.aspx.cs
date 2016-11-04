@@ -174,52 +174,15 @@ namespace JE_Bank
                 if (lista[i].bild != "")
                 {
                     string bild = "<img src='" + lista[i].bild + "'>";
-                    fråga = "<br />" + lista[i].provdel + "<br />" + bild + "<br/>" + lista[i].fråga + "<br />";
+                    fråga = "<br />" + lista[i].provdel + "<br />" + bild + "<br/>" + lista[i].fråga + "<br />" + "Rätt svar: " + lista[i].rättSvar + "<br/>" + "Ditt svar: " + lista[i].user_svar;
                 }
                 else
                 {
-                    fråga = "<br />" + lista[i].provdel + "<br />" + lista[i].fråga + "<br />";
+                    fråga = "<br />" + lista[i].provdel + "<br />" + lista[i].fråga + "<br />" + "Rätt svar: " + lista[i].rättSvar + "<br/>" + "Ditt svar: " + lista[i].user_svar;
                 }
                 div.InnerHtml = fråga;
-                //RadioButtonList rdlist = new RadioButtonList();
-                //rdlist.ID = "rbli" + i.ToString();
-                //rdlist.Items.Add(lista[i].svar1);
-                //rdlist.Items.Add(lista[i].svar2);
-                //rdlist.Items.Add(lista[i].svar3);
-                //rdlist.Items.Add(lista[i].svar4);
-
-                //for (int r = 0; r < 4; r++)
-                //{
-
-                //    RadioButton radio = new RadioButton();
-                //    radio.ID = "rd" + i.ToString() + r.ToString();
-                //    radio.GroupName = "gn" + i.ToString();
-                //    string text = "";
-                //    if (r == 0)
-                //    {
-                //        text = lista[i].svar1;
-                //    }
-                //    if (r == 1)
-                //    {
-                //        text = lista[i].svar2;
-                //    }
-                //    if (r == 2)
-                //    {
-                //        text = lista[i].svar3;
-                //    }
-                //    if (r == 3)
-                //    {
-                //        text = lista[i].svar4;
-                //    }
-                //    radio.Text = text;
-                //    div.Controls.Add(radio);
-                //}
                 test.Controls.Add(div);
-                //test.Controls.Add(rdlist);
-                //RequiredFieldValidator che = new RequiredFieldValidator();
-                //che.ControlToValidate = "rbli" + i.ToString();
-                //che.Text = "Svara på frågan";
-                //test.Controls.Add(che);
+               
 
             }
         }
