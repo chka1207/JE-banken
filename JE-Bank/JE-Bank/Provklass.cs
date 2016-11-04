@@ -46,5 +46,19 @@ namespace JE_Bank
 
             return prov;
         }
+
+        public void XmltillDatabas(int id, string xml)
+        {
+            userID = id;
+            xmldatabas = xml;
+            string user_id = Convert.ToString(id);
+
+            postgres x = new postgres();
+            x.SqlParameters("update users set xml = @par2 where user_id = @par1;", postgres.lista = new List<NpgsqlParameter>()
+            {
+                new NpgsqlParameter("@par1", user_id),
+                new NpgsqlParameter("@par2", xml)
+            });
+        }
     }
 }

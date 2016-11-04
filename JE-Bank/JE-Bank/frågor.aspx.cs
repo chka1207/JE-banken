@@ -181,6 +181,8 @@ namespace JE_Bank
 
         protected void Ratta_Click(object sender, EventArgs e)
         {
+            Provklass p = new Provklass();
+            int user_id = 0;
             int resultat = 0;
             int del1 =0, del2 =0, del3=0;
             ContentPlaceHolder MainC = (ContentPlaceHolder)Page.Master.FindControl("ContentPlaceHolder1");
@@ -206,10 +208,11 @@ namespace JE_Bank
                             del3++;
                         }
 
-                        skrivTillXml(rd1.Text, lista[i].provdelID, lista[i].frågaID); 
+                        p.xmldatabas = skrivTillXml(rd1.Text, lista[i].provdelID, lista[i].frågaID, ref user_id); 
                     }
                 }
             }
+            p.XmltillDatabas(user_id, p.xmldatabas);
             resultat = del1 + del2 + del3;
             Session["Resul"] = lista.Count;
             Session["del1"] = del1;
@@ -219,11 +222,12 @@ namespace JE_Bank
 
         }
 
-        public void skrivTillXml(string valt_svar, int provdelID, int frågaID)
+        public string skrivTillXml(string valt_svar, int provdelID, int frågaID, ref int user_id)
         {
             Provklass p = new Provklass();
-            p.userID = 2; // ska komma från click_event
-            
+            p.userID = 3; // ska komma från click_event
+
+            user_id = p.userID;
             string path = Server.MapPath(@"xml\kunskap.xml");
             string path2 = Server.MapPath(@"xml\" + p.userID + ".xml");
             XmlDocument doc = new XmlDocument();
@@ -247,7 +251,9 @@ namespace JE_Bank
             string nyttxml = Server.MapPath(@"xml\" + p.userID + ".xml");
 
             doc.Save(nyttxml);
-            p.xmldatabas = doc.ToString();
+            p.xmldatabas = doc.OuterXml;
+
+            return p.xmldatabas;
 
         }
 

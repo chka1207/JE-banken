@@ -20,7 +20,7 @@
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
-      <user_svar>Lagen om anställningsskydd</user_svar>
+      <user_svar>En person vid namn Lars-Anders Svensson</user_svar>
     </fråga>
     <fråga id="3">
       <text bild="">Vilket djur är ett däggdjur?</text>
@@ -30,7 +30,7 @@
         <svar id="rätt">Människa</svar>
         <svar id="4">Räka</svar>
       </svarsalternativ>
-      <user_svar>Människa</user_svar>
+      <user_svar>Gädda</user_svar>
     </fråga>
     <fråga id="4">
       <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
@@ -40,7 +40,7 @@
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
-      <user_svar>En hund</user_svar>
+      <user_svar>En björn</user_svar>
     </fråga>
     <fråga id="5">
       <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
@@ -50,7 +50,7 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Ja, självklart</user_svar>
+      <user_svar>Vad är ett betalkort?</user_svar>
     </fråga>
   </provdel>
   <provdel ID="2">
@@ -73,7 +73,7 @@
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
-      <user_svar>Lagen om anställningsskydd</user_svar>
+      <user_svar>En person vid namn Lars-Anders Svensson</user_svar>
     </fråga>
     <fråga id="8">
       <text bild="">Vilket djur är ett däggdjur?</text>
@@ -83,7 +83,7 @@
         <svar id="rätt">Människa</svar>
         <svar id="4">Räka</svar>
       </svarsalternativ>
-      <user_svar>Människa</user_svar>
+      <user_svar>Gädda</user_svar>
     </fråga>
     <fråga id="9">
       <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
@@ -93,7 +93,7 @@
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
-      <user_svar>En hund</user_svar>
+      <user_svar>En björn</user_svar>
     </fråga>
     <fråga id="10">
       <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
@@ -103,7 +103,7 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Ja, självklart</user_svar>
+      <user_svar>Vad är ett betalkort?</user_svar>
     </fråga>
   </provdel>
   <provdel ID="3">
@@ -126,7 +126,7 @@
         <svar id="3">Lunds Aktiesällskap</svar>
         <svar id="4">Något helt annat</svar>
       </svarsalternativ>
-      <user_svar>Lagen om anställningsskydd</user_svar>
+      <user_svar>En person vid namn Lars-Anders Svensson</user_svar>
     </fråga>
     <fråga id="13">
       <text bild="">Vilket djur är ett däggdjur?</text>
@@ -136,7 +136,7 @@
         <svar id="rätt">Människa</svar>
         <svar id="4">Räka</svar>
       </svarsalternativ>
-      <user_svar>Människa</user_svar>
+      <user_svar>Gädda</user_svar>
     </fråga>
     <fråga id="14">
       <text bild="http://studenter.miun.se/~chka1207/djur.jpg">Vad föreställer bilden?</text>
@@ -146,7 +146,7 @@
         <svar id="3">En groda</svar>
         <svar id="4">En blåval</svar>
       </svarsalternativ>
-      <user_svar>En hund</user_svar>
+      <user_svar>En björn</user_svar>
     </fråga>
     <fråga id="15">
       <text bild="">Erbjuder vi olika betalkort till våra kunder?</text>
@@ -156,7 +156,7 @@
         <svar id="3">Vet ej</svar>
         <svar id="rätt">Ja, självklart</svar>
       </svarsalternativ>
-      <user_svar>Ja, självklart</user_svar>
+      <user_svar>Vad är ett betalkort?</user_svar>
     </fråga>
   </provdel>
 </kunskapsprov>
