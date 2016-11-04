@@ -28,7 +28,8 @@ namespace JE_Bank
         public void Laddaresultat()
         {
             if (Session["resul"] != null)
-            { 
+            {
+                Provklass p = new Provklass();
             string resultat1 = Session["Resul"].ToString();
             double del1 = Convert.ToDouble(Session["del1"].ToString());
             double del2 = Convert.ToDouble(Session["del2"].ToString());
@@ -47,6 +48,7 @@ namespace JE_Bank
 
                 if (resultat1 == "15")
                 {
+                    
                     del11 = del1 / 5 * 100;
                     del21 = del2 / 5 * 100;
                     del31 = del3 / 5 * 100;
@@ -63,11 +65,13 @@ namespace JE_Bank
             if (total1> 69&& del11 > 59 && del21 >59 && del31 >59)
                 {
                     lbresultat1.Text = "GODKÄND";
+                    p.laddaUppResultat(1, true, resultat1);
 
                 }
                 else
                 {
                     lbresultat1.Text = "INTE GODKÄND";
+                    p.laddaUppResultat(1, false, resultat1);
                 }
                 del11 = Math.Round(del11, 2);
                 del21 = Math.Round(del21, 2);

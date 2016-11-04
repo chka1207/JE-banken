@@ -82,8 +82,11 @@ div.front{
       display:inline-block;
 
        }
-
+.text{
+    padding:2px 5px;
 }
+
+
 img {
     max-width: 100%;
     height: auto;
